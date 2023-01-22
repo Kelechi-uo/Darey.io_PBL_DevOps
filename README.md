@@ -1,2 +1,2 @@
 # Darey.io_DevOps_Project1
-Step 3_Project 1: LAMP stack implementation.
+Step 3 _ Project 1: LAMP stack implementation.
