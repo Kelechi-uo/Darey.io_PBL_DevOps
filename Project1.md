@@ -59,7 +59,8 @@ The permissions control the actions that can be performed on the file or directo
 We can use the `-l` (long format) option to have `ls` list the file permissions for files and directories.
 
     ls -l
+
 The output will look like this below
 
-![image]( )
+![Alt text](Images/Ls%20-L.png)
 
