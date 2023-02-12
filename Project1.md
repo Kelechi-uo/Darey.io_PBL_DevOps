@@ -2,7 +2,7 @@
 
 ## What is SDLC?
 
-### SDLC stands for Software Development Life Cycle, which is a process that outlines the steps involved in creating software from conception to deployment. The process is designed to ensure that the software is developed according to the specific requirements and that the final product is of high quality. The main steps involved in the SDLC are:
+SDLC stands for Software Development Life Cycle, which is a process that outlines the steps involved in creating software from conception to deployment. The process is designed to ensure that the software is developed according to the specific requirements and that the final product is of high quality. The main steps involved in the SDLC are:
 
 1. Requirements gathering and analysis: This involves understanding the needs of the customers and stakeholders, and determining the requirements for the software.
 
@@ -22,9 +22,9 @@ The SDLC provides a structured approach to software development and helps to ens
 
 <!-- BASIC EXPLANATION OF LAMP -->
 
-## What is LAMP?
+# What is LAMP?
 
-### LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP. It refers to a software stack that is used to build dynamic websites and web applications. The components of the LAMP stack are:
+LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP. It refers to a software stack that is used to build dynamic websites and web applications. The components of the LAMP stack are:
 
 1. Linux: A free and open-source operating system that is the foundation of the LAMP stack.
 
@@ -40,27 +40,26 @@ Together, these components form a complete solution for building and running web
 
 <!-- BASIC EXPLANATION OF CHMOD -->
 
-## WHAT is chmod?
+# What is chmod?
 
 chmod is a command in Unix-like operating systems that stands for "change mode" and is used to change the permissions on a file or directory. Permissions determine which users have access to read, write, or execute a file or directory.
 
-**Key take away:** 
+## Key Take Away
 
 Chmod takes three main arguments: `r`, `w`, and `x`, which stand for read, write, and execute, respectively. Adding or removing combinations of the arguments controls file and folder permissions. For example, `chmod +rwx` adds permission to read, write, and execute scripts. Running `chmod -wx` removes the ability to write and execute.
 
-**chmod Modifies File Permissions:**
+## chmod Modifies File Permissions
 
 In Linux, who can do what to a file or directory is controlled through sets of permissions. There are three sets of permissions. One set for the owner of the file, another set for the members of the file’s group, and a final set for everyone else.
 
 The permissions control the actions that can be performed on the file or directory. They either permit, or prevent, a file from being read, modified or, if it is a script or program, executed. For a directory, the permissions govern who can cd into the directory and who can create, or modify files within the directory.
 
-**Viewing and Understanding File Permissions**
+## Viewing and Understanding File Permissions
 
 We can use the `-l` (long format) option to have `ls` list the file permissions for files and directories.
 
     ls -l
 
-The output will look like this below
 
 ![Alt text](Images/Ls%20-L.png)
 
@@ -146,10 +145,122 @@ The “which ” values we can use are:
 
 ## Setting And Modifying Permissions
 
+Let’s say we have a file where everyone has full permissions on it.
+
+    ls -l new_ file.txt
+
+   
+
+![Alt text](Images/ls%20-l%20new_%20file.png)    
+
+We want the user dave to have read and write permissions and the group and other users to have read permissions only. We can do using the following command:
+
+    chmod u=rw,og=r new_file.txt
 
 
+![Alt text](Images/chmod%20u=rw,og=r%20new_file.png)
 
+Using the `=` operator means we wipe out any existing permissions and then set the ones specified.
 
+let’s check the new permission on this file:
+
+    ls -l new_file.txt
+
+![Alt text](Images/ls%20-l%20new_file_2.png)
+
+The existing permissions have been removed, and the new permissions have been set, as we expected.
+
+How about adding a permission without removing the existing permissions settings? We can do that easily too.
+
+Let’s say we have a script file that we have finished editing. We need to make it executable for all users. Its current permissions look like this:
+
+    ls -l new_script.sh
+
+![Alt text](Images/ls%20-l%20new_script.png)
+
+We can add the execute permission for everyone with the following command:
+
+    chmod a+x new_script.sh
+
+![Alt text](Images/chmod%20a+x%20new_script.png)    
+
+If we take a look at the permissions, we’ll see that the execute permission is now granted to everyone, and the existing permissions are still in place.
+
+    ls -l new_script.sh
+
+![Alt text](Images/ls%20-l%20new_script_2.png)
+
+We could have achieved the same thing without the `a` in the `a` `+` `x` statement. The following command below would have worked just as well.
+
+    chmod +x new_script.sh
+
+## Setting Permissions for Multiple Files
+
+We can apply permissions to multiple files all at once.
+
+These are the files in the current directory:
+
+    ls -l
+
+![Alt text](Images/ls%20-l_1.png)
+
+Let’s say we want to remove the read permissions for the “other” users from files that have a “.page” extension. We can do this with the following command:
+
+    chmod o-r *.page
+
+![Alt text](Images/chmod%20o-r%20.png)
+
+Let’s check what effect that has had:
+
+    ls -l
+
+![Alt text](Images/ls%20-l_2.png)
+
+As we can see, the read permission has been removed from the “.page” files for the “other” category of users. No other files have been affected.
+
+If we had wanted to include files in subdirectories, we could have used the `-R` (recursive) option.
+
+    chmod -R o-r *.page
+
+## Numerical Shorthand
+
+Another way to use chmod is to provide the permissions you wish to give to the owner, group, and others as a three-digit number. The leftmost digit represents the permissions for the owner. The middle digit represents the permissions for the group members. The rightmost digit represents the permissions for the others.
+
+The digits you can use and what they represent are listed here:
+
+* `0` (000) No permission.
+
+* `1` (001) Execute permission.
+
+* `2` (010) Write permission.
+
+* `3` (011) Write and execute permissions.
+
+* `4` (100) Read permission.
+
+* `5` (101) Read and execute permissions.
+
+* `6` (110) Read and write permissions.
+
+* `7` (111) Read, write, and execute permissions.
+
+Each of the three permissions is represented by one of the bits in the binary equivalent of the decimal number. So `5`, which is 101 in binary, means read and execute. `2`, which is 010 in binary, would mean the write permission.
+
+Using this method, you set the permissions that you wish to have; you do not add these permissions to the existing permissions. So if read and write permissions were already in place you would have to use `7` (111) to add execute permissions. Using `1` (001) would remove the read and write permissions and add the execute permission.
+
+Let’s add the read permission back on the “.page” files for the others category of users. We must set the user and group permissions as well, so we need to set them to what they are already. These users already have read and write permissions, which is `6` (110). We want the “others” to have read and permissions, so they need to be set to `4` (100).
+
+The following command will accomplish this:
+
+    chmod 664 *.page
+
+![Alt text](Images/chmod%20664.png)
+
+This sets the permissions we require for the user, group members, and others to what we require. The users and group members have their permissions reset to what they already were, and the others have the read permission restored.
+
+    ls -l
+
+![Alt text](Images/ls%20-l_3.png)
 
 
 
