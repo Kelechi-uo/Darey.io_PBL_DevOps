@@ -261,7 +261,7 @@ The following command will accomplish this:
 This sets the permissions we require for the user, group members, and others to what we require. The users and group members have their permissions reset to what they already were, and the others have the read permission restored.
 
 
-`bash`  
+`bash`  return  
 
 
     ls -l
