@@ -42,6 +42,8 @@ Together, these components form a complete solution for building and running web
 
 # What is chmod?
 
+Source: https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/
+
 chmod is a command in Unix-like operating systems that stands for "change mode" and is used to change the permissions on a file or directory. Permissions determine which users have access to read, write, or execute a file or directory.
 
 ## Key Take Away
