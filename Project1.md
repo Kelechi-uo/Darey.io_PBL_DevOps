@@ -64,3 +64,7 @@ The output will look like this below
 
 ![Alt text](Images/Ls%20-L.png)
 
+On each line, the first character identifies the type of entry that is being listed. If it is a dash `-` it is a file. If it is the letter d it is a directory.
+
+
+
