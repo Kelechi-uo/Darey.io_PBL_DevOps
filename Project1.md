@@ -68,5 +68,21 @@ On each line, the first character identifies the type of entry that is being lis
 
 The next nine characters represent the settings for the three sets of permissions.
 
+* The first three characters show the permissions for the user who owns the file (user permissions).
+
+* The middle three characters show the permissions for members of the file’s group (group permissions).
+
+* The last three characters show the permissions for anyone not in the first two categories (other permissions).
+
+There are three characters in each set of permissions. The characters are indicators for the presence or absence of one of the permissions. They are either a dash `-` or a letter. If the character is a dash, it means that permission is not granted. If the character is an `r`, `w`, or an `x`, that permission has been granted.
+
+The letters represent:
+
+* `r`: Read permissions. The file can be opened, and its content viewed.
+
+* `w`: Write permissions. The file can be edited, modified, and deleted.
+
+* `x`: Execute permissions. If the file is a script or a program, it can be run (executed).
+
 
 
