@@ -74,7 +74,7 @@ The next nine characters represent the settings for the three sets of permission
 
 * The last three characters show the permissions for anyone not in the first two categories (other permissions).
 
-There are three characters in each set of permissions. The characters are indicators for the presence or absence of one of the permissions. They are either a dash `-` or a letter. If the character is a dash, it means that permission is not granted. If the character is an `r`, `w`, or an `x`, that permission has been granted.
+There are three characters in each set of permissions. The characters are indicators for the presence or absence of one of the permissions. They are either a dash `-` or a letter. If the character is a dash, it means that permission is not granted. If the character is an `r`,  `w`,  or an `x`,  that permission has been granted.
 
 The letters represent:
 
