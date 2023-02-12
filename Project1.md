@@ -96,7 +96,7 @@ The next three characters are the user permissions for this directory. These sho
 
 The second set of three characters are the group permissions, these are `r` `-` `x`. These show that the members of the dave group have read and execute permissions for this directory. That means they can list the files and their contents in the directory, and they can cd (execute) into that directory. They do not have write permissions, so they cannot create, edit, or delete files.
 
-The final set of three characters are also `r-x`.  These permissions apply to people who are not governed by the first two sets of permissions. These people (called”others”) have read and execute permissions on this directory.
+The final set of three characters are also `r` `-` `x`.  These permissions apply to people who are not governed by the first two sets of permissions. These people (called”others”) have read and execute permissions on this directory.
 
 So, to summarise, group members and others have read and execute permissions. The owner, a user called dave, also has write permissions.
 
