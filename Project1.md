@@ -104,6 +104,52 @@ For all of the other files (apart from the `mh.sh` script file) dave and members
 
 For the special case of the mh.sh script file, the owner dave and the group members have read, write, and execute permissions, and the others have read and execute permissions only.
 
+## Understanding The Permission Syntax
+
+To use chmod to set permissions, we need to tell it:
+
+* Who: Who we are setting permissions for.
+
+* What: What change are we making? Are we adding or removing the permission?
+
+* Which: Which of the permissions are we setting?
+
+We use indicators to represent these values, and form short “permissions statements” such as `u` `+` `x`, where `u` means ”user” (who), `+` means add (what), and `x` means the execute permission (which).
+
+The “who” values we can use are:
+
+* `u` User, meaning the owner of the file.
+
+* `u` User, meaning the owner of the file.
+
+* `o` Others, meaning people not governed by the u and g permissions.
+
+* `a` All, meaning all of the above.
+
+If none of these are used, chmod behaves as if `a` had been used.
+
+The “what” values we can use are:
+
+* `–` Minus sign. Removes the permission.
+
+* `+` Plus sign. Grants the permission. The permission is added to the existing permissions. If you want to have this permission and only this permission set, use the `=` option, described below.
+
+* `=` Equals sign. Set a permission and remove others.
+
+The “which ” values we can use are:
+
+* `r`  The read permission.
+
+* `w` The write permission.
+
+* `x` The execute permission.
+
+## Setting And Modifying Permissions
+
+
+
+
+
 
 
 
