@@ -78,11 +78,11 @@ There are three characters in each set of permissions. The characters are indica
 
 The letters represent:
 
-* `r`: Read permissions. The file can be opened, and its content viewed.
+* `r` Read permissions. The file can be opened, and its content viewed.
 
-* `w`: Write permissions. The file can be edited, modified, and deleted.
+* `w` Write permissions. The file can be edited, modified, and deleted.
 
-* `x`: Execute permissions. If the file is a script or a program, it can be run (executed).
+* `x` Execute permissions. If the file is a script or a program, it can be run (executed).
 
 
 
