@@ -74,7 +74,7 @@ The next nine characters represent the settings for the three sets of permission
 
 * The last three characters show the permissions for anyone not in the first two categories (other permissions).
 
-There are three characters in each set of permissions. The characters are indicators for the presence or absence of one of the permissions. They are either a dash `-` or a letter. If the character is a dash, it means that permission is not granted. If the character is an `r`,  `w`,  or an `x`,  that permission has been granted.
+There are three characters in each set of permissions. The characters are indicators for the presence or absence of one of the permissions. They are either a dash `-` or a letter. If the character is a dash, it means that permission is not granted. If the character is an `r`, `w`, or an `x`, that permission has been granted.
 
 The letters represent:
 
@@ -83,6 +83,28 @@ The letters represent:
 * `w` Write permissions. The file can be edited, modified, and deleted.
 
 * `x` Execute permissions. If the file is a script or a program, it can be run (executed).
+
+For example:
+
+* --- means no permissions have been granted at all.
+
+* `r` `w` `x` means full permissions have been granted. The read, write, and execute indicators are all present.
+
+In our screenshot, the first line starts with a `d`. This line refers to a directory called “archive.” The owner of the directory is “dave,” and the name of the group that the directory belongs to is also called “dave.”
+
+The next three characters are the user permissions for this directory. These show that the owner has full permissions. The `r`, `w`, and `x` characters are all present. This means the user dave has read, write and execute permissions for that directory.
+
+The second set of three characters are the group permissions, these are `r` `-` `x`. These show that the members of the dave group have read and execute permissions for this directory. That means they can list the files and their contents in the directory, and they can cd (execute) into that directory. They do not have write permissions, so they cannot create, edit, or delete files.
+
+The final set of three characters are also `r-x`.  These permissions apply to people who are not governed by the first two sets of permissions. These people (called”others”) have read and execute permissions on this directory.
+
+So, to summarise, group members and others have read and execute permissions. The owner, a user called dave, also has write permissions.
+
+For all of the other files (apart from the `mh.sh` script file) dave and members of the dave group have read and write properties on the files, and the others have read permissions only.
+
+For the special case of the mh.sh script file, the owner dave and the group members have read, write, and execute permissions, and the others have read and execute permissions only.
+
+
 
 
 
