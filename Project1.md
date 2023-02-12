@@ -120,7 +120,7 @@ The “who” values we can use are:
 
 * `u` User, meaning the owner of the file.
 
-* `u` User, meaning the owner of the file.
+* `g` Group, meaning members of the group the file belongs to.
 
 * `o` Others, meaning people not governed by the u and g permissions.
 
