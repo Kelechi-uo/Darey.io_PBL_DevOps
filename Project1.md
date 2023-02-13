@@ -40,7 +40,7 @@ Together, these components form a complete solution for building and running web
 
 <!-- BASIC EXPLANATION OF CHMOD -->
 
-# What is chmod?
+# What is CHMOD?
 
 Check source [here](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/)
 
