@@ -385,6 +385,8 @@ By default, when a Linux user is created, they are added to a private group name
 
 This executable file is owned by the user mary and the group the file belongs to is mary's private group.
 
+`Bash`
+
     ls -l
 
 ![Alt text](Images/ls%20-l_4.png)
@@ -397,11 +399,15 @@ This file is owned by the user oscar , but the group that the file belongs to is
 
 Let’s work through some examples. This command will change the user ownership of the file "while.c" to the user mary.
 
+`Bash`
+
     sudo chown mary while.c
 
 ![Alt text](Images/sudo%20chown%20mary%20while.png)
 
 We can use ls to see the changes to the file properties.
+
+`Bash`
 
     ls -l while.c
 
@@ -409,11 +415,15 @@ We can use ls to see the changes to the file properties.
 
 You can use chown to change the ownership of several files at once.
 
+`Bash`
+
     sudo chown mary getval.c global.c goto.c
 
 ![Alt text](Images/sudo%20chown%20mary%20getval.c%20global.c%20goto.png)
 
 This changes the user ownership of all three files.
+
+`Bash`
 
     ls -l getval.c global.c goto.c
 
@@ -421,11 +431,15 @@ This changes the user ownership of all three files.
 
 You can use wildcards to select groups of files. This command will change the user ownership of all files beginning with the letter “c.”
 
+`Bash`
+
     sudo chown mary c*.*
 
 ![Alt text](Images/sudo%20chown%20mary%20c*.*.png)
 
 All of the files will now have mary as their owner. Note that none of the group ownerships have been changed.
+
+`Bash`
 
     ls -l mary c*.*
 
@@ -433,11 +447,15 @@ All of the files will now have mary as their owner. Note that none of the group 
 
 Let’s change the ownership of a directory. We simply pass the directory name to chown instead of a filename.
 
+`Bash`
+
     sudo chown mary ./archive/
 
 ![Alt text](Images/sudo%20chown%20mary%20.:archive:.png)
 
 To check the ownership properties of the directory we use `ls`, but also use the `-d` (directory) option to it. This lists the properties of the directory, not the files inside it.
+
+`Bash`
 
     ls -l -d ./archive/
 
@@ -445,11 +463,15 @@ To check the ownership properties of the directory we use `ls`, but also use the
 
 To change the ownership of all the files in a directory, you can use the `-R` (recursive) option. This option will change the user ownership of all files within the archive folder.
 
+`Bash`
+
     sudo chown -R mary ./archive/
 
 ![Alt text](Images/sudo%20chown%20-R%20mary%20.:archive:.png)
 
 Now let’s look at the files in the archive directory.
+
+`Bash`
 
     ls -l ./archive/
 
@@ -463,11 +485,15 @@ There are different ways to change the group ownership.
 
 To change the group ownership at the same time as you change the user ownership, pass the new owner name and the new group name with a colon “:” separating them. The group must already exist.
 
+`Bash`
+
     sudo chown mary:researchlab charm.c
 
 ![Alt text](Images/sudo%20chown%20mary-researchlab%20charm.png)
 
 The user owner and the group that the file belongs have both been changed.
+
+`Bash`
 
     ls -l charm.c
 
@@ -475,9 +501,13 @@ The user owner and the group that the file belongs have both been changed.
 
 A shorthand way to change the group ownership to the current group of the new owner, just provide the colon and omit the group name.
 
+`Bash`
+
     sudo chown mary: caps.c
 
 ![Alt text](Images/sudo%20chown%20mary-%20capsc.png)
+
+`Bash`
 
     ls -l caps.c
 
@@ -487,9 +517,13 @@ Both user ownership and group ownership have been changed to mary.
 
 To change the group ownership only, precede it with a colon and omit the user name. The user owner will not be altered.
 
+`Bash`
+
     sudo chown :researchlab at.c
 
 ![Alt text](Images/sudo%20chown%20-researchlab%20atc.png)
+
+`Bash`
 
     ls -l at.c
 
@@ -501,9 +535,13 @@ The group ownership has been changed, but the user ownership remains the same.
 
 You can use the numerical UID and GID values with the chown command. This command will set the user and the group ownership to mary.
 
+`Bash`
+
     sudo chown 1001:1001 at.c
 
 ![Alt text](Images/sudo%20chown%201001-1001%20atc.png)
+
+`Bash`
 
     ls -l at.c
 
