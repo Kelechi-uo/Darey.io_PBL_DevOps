@@ -60,7 +60,7 @@ The permissions control the actions that can be performed on the file or directo
 
 We can use the `-l` (long format) option to have `ls` list the file permissions for files and directories.
 
-`bash`
+`Bash`
 
     ls -l
 
@@ -151,7 +151,7 @@ The “which ” values we can use are:
 
 Let’s say we have a file where everyone has full permissions on it.
 
-`bash`
+`Bash`
 
     ls -l new_ file.txt
 
@@ -161,7 +161,7 @@ Let’s say we have a file where everyone has full permissions on it.
 
 We want the user dave to have read and write permissions and the group and other users to have read permissions only. We can do using the following command:
 
-`bash`
+`Bash`
 
     chmod u=rw,og=r new_file.txt
 
@@ -172,7 +172,7 @@ Using the `=` operator means we wipe out any existing permissions and then set t
 
 let’s check the new permission on this file:
 
-`bash`
+`Bash`
 
     ls -l new_file.txt
 
@@ -184,7 +184,7 @@ How about adding a permission without removing the existing permissions settings
 
 Let’s say we have a script file that we have finished editing. We need to make it executable for all users. Its current permissions look like this:
 
-`bash`
+`Bash`
 
     ls -l new_script.sh
 
@@ -192,7 +192,7 @@ Let’s say we have a script file that we have finished editing. We need to make
 
 We can add the execute permission for everyone with the following command:
 
-`bash`
+`Bash`
 
     chmod a+x new_script.sh
 
@@ -200,7 +200,7 @@ We can add the execute permission for everyone with the following command:
 
 If we take a look at the permissions, we’ll see that the execute permission is now granted to everyone, and the existing permissions are still in place.
 
-`bash`
+`Bash`
 
     ls -l new_script.sh
 
@@ -208,7 +208,7 @@ If we take a look at the permissions, we’ll see that the execute permission is
 
 We could have achieved the same thing without the `a` in the `a` `+` `x` statement. The following command below would have worked just as well.
 
-`bash`
+`Bash`
 
     chmod +x new_script.sh
 
@@ -218,7 +218,7 @@ We can apply permissions to multiple files all at once.
 
 These are the files in the current directory:
 
-`bash`
+`Bash`
 
     ls -l
 
@@ -226,7 +226,7 @@ These are the files in the current directory:
 
 Let’s say we want to remove the read permissions for the “other” users from files that have a “.page” extension. We can do this with the following command:
 
-`bash`
+`Bash`
 
     chmod o-r *.page
 
@@ -234,7 +234,7 @@ Let’s say we want to remove the read permissions for the “other” users fro
 
 Let’s check what effect that has had:
 
-`bash`
+`Bash`
 
     ls -l
 
@@ -244,7 +244,7 @@ As we can see, the read permission has been removed from the “.page” files f
 
 If we had wanted to include files in subdirectories, we could have used the `-R` (recursive) option.
 
-`bash`
+`Bash`
 
     chmod -R o-r *.page
 
@@ -278,7 +278,7 @@ Let’s add the read permission back on the “.page” files for the others cat
 
 The following command will accomplish this:
 
-`bash`
+`Bash`
 
     chmod 664 *.page
 
@@ -286,7 +286,7 @@ The following command will accomplish this:
 
 This sets the permissions we require for the user, group members, and others to what we require. The users and group members have their permissions reset to what they already were, and the others have the read permission restored.
 
-`bash`
+`Bash`
   
     ls -l
 
@@ -329,7 +329,7 @@ You may create a file or directory logged in as root, but you want it to be acce
 
 To list the groups you are in, you can use the groups command.
 
-`bash`
+`Bash`
 
     groups
 
