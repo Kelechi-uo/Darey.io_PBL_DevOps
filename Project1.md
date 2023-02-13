@@ -292,6 +292,51 @@ This sets the permissions we require for the user, group members, and others to 
 
 ![Alt text](Images/ls%20-l_3.png)
 
+---
+
+
+
+<!-- BASIC EXPLANATION OF CHOWN -->
+
+# What is CHOWN?
+
+"chown" stands for "change owner" and it's a command in Unix-like operating systems that allows a user to change the owner of a file or directory. The owner of a file or directory has certain privileges over it, such as the ability to read, write, and execute the file.
+
+## Each File Belongs to a User and a Group
+
+Linux is a multi-user system. The operating system allows multiple user accounts to be defined and for any valid user to log on to the computer. Moreover, multiple users can use a single computer at the same time.
+
+To maintain a record of which files belong to which user and to enforce some security, Linux uses the concept of ownership. Every file belongs to an owner—a user—and to a group.
+
+When a file is created, its owner is the user who created it. The group that the file belongs to—the “owning” group—is the user’s current group. Users and groups have names, and they have numeric identities too, called a user (or unique) identifier (UID) and a group identifier (GID).
+
+When you create a file, it is owned by you, and it belongs to your current group. Usually, this is the group you have signed into. By default, this is a group that shares the same name as your user name and was created when you were created as a user on the system.
+
+You can use the chown command to can change the ownership values to something else. You can set a new owner, a new group, or a new owner and a new group at the same time. The owner of a file can change the group ownership, but only root can change the user ownership because that involves another user. Without root privileges, you can’t make another user on the system unwittingly “adopt” a file.
+
+## Why Would You Want To Change Ownership?
+
+Here are a few examples of situations where you might want to do this:
+
+* If you transfer files between different Linux or Unix-like operating systems, you will need to change the user and group owners to the new user and group owners of the account you wish to use the files under on the new Linux computer.
+
+* A user may leave your organization, and all of his files will be the responsibility of another staff member. You will need to change the owner and group owner to the staff member now responsible for those files.
+
+* You may author a script that is going to be used by a specific user.
+You may create a file or directory logged in as root, but you want it to be accessible to a specific user.
+
+## Viewing Your Groups, UID, and GID
+
+To list the groups you are in, you can use the groups command.
+
+`bash`
+
+    groups
+
+![Alt text](Images/groups.png)    
+
+
+
 
 
 
