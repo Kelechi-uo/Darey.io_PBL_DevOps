@@ -1,3 +1,8 @@
+
+# PROJECT 1 - WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+
+# SIDE SELF STUDY:
+
 <!-- BASIC EXPLANATION OF SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC) -->
 
 # What is SDLC?
@@ -550,3 +555,58 @@ You can use the numerical UID and GID values with the chown command. This comman
 ## Possession is Nine-Tenths of the Law
 
 Or so they say. But in Linux, ownership is a massive part of file security, with file permissions providing the remainder of it. Use the chown and chmod commands to secure file access on your system.
+
+
+---
+
+
+<!-- BASIC EXPLANATION OF TCP AND UDP -->
+
+
+# What is TCP AND UDP?
+
+TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are two of the most commonly used protocols for transmitting data over a network. They are different in terms of their features and the way they transmit data.
+
+TCP is a reliable and secure protocol that provides a guaranteed delivery of data. When a data packet is sent using TCP, the recipient acknowledges receipt of the packet, and the sender retransmits any unacknowledged packets. This ensures that all data packets are received by the recipient in the same order they were sent. However, this reliability comes at a cost of increased overhead, as the transmission and receipt of acknowledgements add to the total amount of data transmitted.
+
+UDP, on the other hand, is an unreliable and fast protocol that does not guarantee the delivery of data. It does not wait for the recipient to acknowledge receipt of the data packet and does not retransmit any lost packets. This means that data sent using UDP may be lost or delivered out of order, but the protocol is faster and has less overhead, as it does not require the transmission and receipt of acknowledgements.
+
+In summary, TCP is best suited for applications that require guaranteed delivery of data, such as file transfers and email, while UDP is best suited for applications that require speed and low overhead, such as video and audio streaming.
+
+
+## Here are some of the most common ports used in web technology:
+
+1. HTTP (Hypertext Transfer Protocol): Port 80
+
+2. HTTPS (Secure Hypertext Transfer Protocol): Port 443
+
+3. FTP (File Transfer Protocol): Port 21
+
+4. SFTP (Secure File Transfer Protocol): Port 22
+
+5. SMTP (Simple Mail Transfer Protocol): Port 25
+
+6. POP3 (Post Office Protocol version 3): Port 110
+
+7. IMAP (Internet Message Access Protocol): Port 143
+
+8. SSH (Secure Shell): Port 22
+
+9. Telnet: Port 23
+
+It's worth noting that these are default ports, and they can be changed depending on the configuration of the server or network.
+
+
+# WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+
+## Step 0 – Preparing prerequisites
+
+1. AWS account setup and Provisioning an Ubuntu Server
+
+![Alt text](Images/INSTANCE%20SUMMARY.png)
+
+2. Connecting to your EC2 Instance
+
+
+
+
