@@ -312,7 +312,7 @@ When a file is created, its owner is the user who created it. The group that the
 
 When you create a file, it is owned by you, and it belongs to your current group. Usually, this is the group you have signed into. By default, this is a group that shares the same name as your user name and was created when you were created as a user on the system.
 
-You can use the chown command to can change the ownership values to something else. You can set a new owner, a new group, or a new owner and a new group at the same time. The owner of a file can change the group ownership, but only root can change the user ownership because that involves another user. Without root privileges, you can’t make another user on the system unwittingly “adopt” a file.
+You can use the chown command to change the ownership values to something else. You can set a new owner, a new group, or a new owner and a new group at the same time. The owner of a file can change the group ownership, but only root can change the user ownership because that involves another user. Without root privileges, you can’t make another user on the system unwittingly “adopt” a file.
 
 ## Why Would You Want To Change Ownership?
 
@@ -333,12 +333,182 @@ To list the groups you are in, you can use the groups command.
 
     groups
 
-![Alt text](Images/groups.png)    
+![Alt text](Images/groups.png)
 
+To get a list of the groups, their numerical IDs, and your UID and GID, use the id command:
 
+`Bash`
 
+    id
 
+![Alt text](Images/id.png)
 
+You can use some options with ID to refine the output.
 
+* `-u` List your UID.
 
+* `-g` List your effective (current) GID.
 
+* `-nu` List your user name.
+
+* `-ng` List your current group name.
+
+`Bash`
+
+```
+id -u
+```
+```
+id -g
+```
+```
+id -nu
+```
+```
+id -ng
+```
+![Alt text](Images/id_2.png)
+
+## Viewing User and Group Ownership of a File
+
+To see the owners of a file or directory, use the `-l` (long listing) option with `ls`.
+
+`Bash`
+
+    ls -l
+
+![Alt text](Images/ls_3.png)
+
+We can see that the name dave appears twice in the listing. The left-most appearance tells us the file owner is a user called dave. The right-most dave tells us the file belongs to a group that is also called dave.
+
+By default, when a Linux user is created, they are added to a private group named for their username. They are the only member of that group.
+
+This executable file is owned by the user mary and the group the file belongs to is mary's private group.
+
+    ls -l
+
+![Alt text](Images/ls%20-l_4.png)
+
+This file is owned by the user oscar , but the group that the file belongs to is called researchlab. This means that other members of the researchlab group may access this file, according to the file permissions that have been set for the members of that group.
+
+![Alt text](Images/ls_5.png)
+
+## Changing User Ownership
+
+Let’s work through some examples. This command will change the user ownership of the file "while.c" to the user mary.
+
+    sudo chown mary while.c
+
+![Alt text](Images/sudo%20chown%20mary%20while.png)
+
+We can use ls to see the changes to the file properties.
+
+    ls -l while.c
+
+![Alt text](Images/ls%20-l%20while.png)
+
+You can use chown to change the ownership of several files at once.
+
+    sudo chown mary getval.c global.c goto.c
+
+![Alt text](Images/sudo%20chown%20mary%20getval.c%20global.c%20goto.png)
+
+This changes the user ownership of all three files.
+
+    ls -l getval.c global.c goto.c
+
+![Alt text](Images/ls%20-l%20getval.c%20global.c%20goto.png)  
+
+You can use wildcards to select groups of files. This command will change the user ownership of all files beginning with the letter “c.”
+
+    sudo chown mary c*.*
+
+![Alt text](Images/sudo%20chown%20mary%20c*.*.png)
+
+All of the files will now have mary as their owner. Note that none of the group ownerships have been changed.
+
+    ls -l mary c*.*
+
+![Alt text](Images/ls%20-l%20mary%20c*.*.png)    
+
+Let’s change the ownership of a directory. We simply pass the directory name to chown instead of a filename.
+
+    sudo chown mary ./archive/
+
+![Alt text](Images/sudo%20chown%20mary%20.:archive:.png)
+
+To check the ownership properties of the directory we use `ls`, but also use the `-d` (directory) option to it. This lists the properties of the directory, not the files inside it.
+
+    ls -l -d ./archive/
+
+![Alt text](Images/ls%20-l%20-d%20.:archive:.png)
+
+To change the ownership of all the files in a directory, you can use the `-R` (recursive) option. This option will change the user ownership of all files within the archive folder.
+
+    sudo chown -R mary ./archive/
+
+![Alt text](Images/sudo%20chown%20-R%20mary%20.:archive:.png)
+
+Now let’s look at the files in the archive directory.
+
+    ls -l ./archive/
+
+![Alt text](Images/ls%20-l%20.:archive:.png)
+
+As expect, all of the files now belong to mary.
+
+## Changing Group Ownership
+
+There are different ways to change the group ownership.
+
+To change the group ownership at the same time as you change the user ownership, pass the new owner name and the new group name with a colon “:” separating them. The group must already exist.
+
+    sudo chown mary:researchlab charm.c
+
+![Alt text](Images/sudo%20chown%20mary-researchlab%20charm.png)
+
+The user owner and the group that the file belongs have both been changed.
+
+    ls -l charm.c
+
+![Alt text](Images/ls%20-l%20charmc.png)
+
+A shorthand way to change the group ownership to the current group of the new owner, just provide the colon and omit the group name.
+
+    sudo chown mary: caps.c
+
+![Alt text](Images/sudo%20chown%20mary-%20capsc.png)
+
+    ls -l caps.c
+
+![Alt text](Images/ls%20-l%20capsc.png)
+
+Both user ownership and group ownership have been changed to mary.
+
+To change the group ownership only, precede it with a colon and omit the user name. The user owner will not be altered.
+
+    sudo chown :researchlab at.c
+
+![Alt text](Images/sudo%20chown%20-researchlab%20atc.png)
+
+    ls -l at.c
+
+![Alt text](Images/ls%20-l%20atc.png)
+
+The group ownership has been changed, but the user ownership remains the same.
+
+## Using Chown with UID and GID Values
+
+You can use the numerical UID and GID values with the chown command. This command will set the user and the group ownership to mary.
+
+    sudo chown 1001:1001 at.c
+
+![Alt text](Images/sudo%20chown%201001-1001%20atc.png)
+
+    ls -l at.c
+
+![Alt text](Images/ls%20-l%20atc2.png)
+
+## Possession is Nine-Tenths of the Law
+
+Or so they say. But in Linux, ownership is a massive part of file security, with file permissions providing the remainder of it. Use the chown and chmod commands to secure file access on your system.
