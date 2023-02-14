@@ -596,17 +596,37 @@ In summary, TCP is best suited for applications that require guaranteed delivery
 
 It's worth noting that these are default ports, and they can be changed depending on the configuration of the server or network.
 
+---
 
-# WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+
+
+<!-- WEB STACK (LAMP) IMPLIMENTATION IN AWS PREREQUISITES-->
+
+
+# Web stack (LAMP) implimentation in prerequisites in AWS
 
 ## Step 0 – Preparing prerequisites
 
+<!-- create AWS account and provision an Ubuntu server-->
+
 1. AWS account setup and Provisioning an Ubuntu Server
 
-![Alt text](Images/INSTANCE%20SUMMARY.png)
+    * For step by step guide, click [here](https://www.youtube.com/watch?v=xxKuB9kJoYM&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh&index=6)
+
+    * Succefully setup AWS account, and provisioned Ubuntu server in AWS. See image below
+
+    ![Alt text](Images/EC2_Ubuntu_20.04.png)
+
+
+<!-- connect to EC2 Instance (aws virtuall Ubuntu server) -->
 
 2. Connecting to your EC2 Instance
 
+    * For step by step guide, click [here](https://www.youtube.com/watch?v=TxT6PNJts-s&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh&index=7)
+
+    * Succefully connected to EC2 Instance (AWS virtuall Ubuntu server), see image below
+
+   ![Alt text](Images/aws%20ec2_ubuntu_connection.png) 
 
 
 
