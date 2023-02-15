@@ -701,5 +701,74 @@ Apache2 default page loaded succesfully, see image below
 ![Alt text](Images/apache2%20default%20page.png)
 
 
+## STEP 2 — INSTALLING MYSQL
+
+Now that i have a web server up and running, i need to install a Database Management System (DBMS) to be able to store and manage data for this site in a relational database. MySQL is a popular relational database management system used within PHP environments, so i will use it in this project.
+
+<!-- intall mysql -->
+
+Again, i will use ‘apt’ to acquire and install this software:
+
+`Bash`
+
+    $ sudo apt install mysql-server
+
+When prompted, confirm installation by typing Y, and then ENTER.
+
+mysql-server installation completed, see image below
+
+![Alt text](Images/1_mysql%20install.png)
+
+![Alt text](Images/2_mysql%20install.png)
+
+<!-- Login to Mysql console -->
+
+When the installation is finished, log in to the MySQL console by typing:
+
+    sudo mysql
+
+Mysql server setup with password validation completed, see image below
+
+![Alt text](Images/Screen%20Shot%202023-02-15%20at%203.17.51%20PM.png)
+
+
+## STEP 3 — INSTALLING PHP
+
+You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the end user. In addition to the php package, you’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.
+
+To install these 3 packages at once, run:
+
+`Bash`
+
+    sudo apt install php libapache2-mod-php php-mysql
+
+Once the installation is finished, you can run the following command to confirm your PHP version:
+
+`Bash`
+
+    php -v
+
+PHP installed successfully, see image below
+
+![Alt text](Images/php%20version%20revealed.png)
+
+
+At this point, my LAMP stack is completely installed and fully operational.
+
+- [x] Linux (Ubuntu)
+- [x]Apache HTTP Server
+- [x]MySQL
+- [x]PHP
+
+
+To test your setup with a PHP script, it’s best to set up a proper Apache Virtual Host to hold your website’s files and folders. Virtual host allows you to have multiple websites located on a single machine and users of the websites will not even notice it.
+
+We will configure our first Virtual Host in the next step.
+
+
+
+
+
+
 
 
