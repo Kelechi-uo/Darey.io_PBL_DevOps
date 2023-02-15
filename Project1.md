@@ -609,7 +609,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
 <!-- create AWS account and provision an Ubuntu server-->
 
-1. AWS account setup and Provisioning an Ubuntu Server
+*  AWS account setup and Provisioning an Ubuntu Server
 
     * For step by step guide, click [here](https://www.youtube.com/watch?v=xxKuB9kJoYM&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh&index=6)
 
@@ -620,7 +620,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
 <!-- connect to EC2 Instance (aws virtuall Ubuntu server) -->
 
-2. Connecting to your EC2 Instance
+* Connecting to your EC2 Instance
 
     * For step by step guide, click [here](https://www.youtube.com/watch?v=TxT6PNJts-s&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh&index=7)
 
@@ -629,4 +629,20 @@ It's worth noting that these are default ports, and they can be changed dependin
    ![Alt text](Images/aws%20ec2_ubuntu_connection.png) 
 
 
+
+## STEP 1 — Installing APACHE and updating firewall.
+
+   <!-- Install Apache using Ubuntu’s package manager ‘apt’ -->
+
+* update a list of packages in package
+
+`Bash`
+
+    sudo apt update
+
+* run apache2 package installation
+
+`Bash`
+
+    sudo apt install apache2
 
