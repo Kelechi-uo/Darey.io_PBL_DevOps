@@ -636,7 +636,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
 * update a list of packages in package
 
-`Bash`
+Script `Bash`
 
     sudo apt update
 
