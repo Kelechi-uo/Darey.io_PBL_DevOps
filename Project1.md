@@ -640,9 +640,66 @@ It's worth noting that these are default ports, and they can be changed dependin
 
     sudo apt update
 
+Updated successfully, see image below
+
+![Alt text](Images/sudo%20apt%20update.png)
+
 * run apache2 package installation
 
 `Bash`
 
     sudo apt install apache2
+
+Apache2 package installed successfully, see image below
+
+![Alt text](Images/1_sudo%20apt%20install%20apache2.png)
+
+![Alt text](Images/2_apache2%20install.png)
+
+* To verify that apache2 is running as a Service in our OS, use following command
+
+`Bash`
+
+    sudo systemctl status apache2
+
+Apache2 running as a service in OS verified, see image below.
+
+![Alt text](Images/apache2%20confirm%20status.png)
+
+* Our server is running and we can access it locally and from the Internet (Source 0.0.0.0/0 means ‘from any IP address’).
+
+First, let us try to check how we can access it locally in our Ubuntu shell, run:
+
+
+    curl http://localhost:80 or curl http://127.0.0.1:80
+
+These 2 commands above actually do pretty much the same – they use ‘curl’ command to request our Apache HTTP Server on port 80 (actually you can even try to not specify any port – it will work anyway). The difference is that: in the first case we try to access our server via DNS name and in the second one – by IP address (in this case IP address 127.0.0.1 corresponds to DNS name ‘localhost’ and the process of converting a DNS name to IP address is called "resolution"). We will touch DNS in further lectures and projects.
+
+As an output you can see some strangely formatted test, do not worry, we just made sure that our Apache web service responds to ‘curl’ command with some payload. See image below
+
+![Alt text](Images/apache%20server%20http%20test%20in%20ubuntu%20shell.png)
+
+Now it is time for us to test how our Apache HTTP server can respond to requests from the Internet.
+Open a web browser of your choice and try to access following url
+
+    http://<Public-IP-Address of your AWS EC2 virtuall server >:80
+
+Another way to retrieve your Public IP address, other than to check it in AWS Web console, is to use following command:
+
+    curl -s http://169.254.169.254/latest/meta-data/public-ipv4
+
+Revealed my EC2 Public IP Address, see below
+
+![Alt text](Images/reveal%20ec2%20ip.png)
+
+Now that i have my AWS EC2 virtual server IP, i will run the ip address below to test how our Apache HTTP server can respond to requests from the Internet.
+
+    http://54.218.34.81:80
+
+Apache2 default page loaded succesfully, see image below
+
+![Alt text](Images/apache2%20default%20page.png)
+
+
+
 
