@@ -848,8 +848,55 @@ Now go to your browser and try to open your website URL using IP address:
 
     http://<Public-IP-Address>:80
 
-My IP: http://54.218.34.81:80    
+My IP: http://54.218.34.81:80
 
+My output, see image below
+
+![Alt text](Images/project%201.%20lamp%20launched.png)
+
+You can also access your website in your browser by public DNS name, not only by IP – try it out, the result must be the same (port is optional)
+
+    http://<Public-DNS-Name>:80
+
+My public DNS name: ec2-54-218-34-81.us-west-2.compute.amazonaws.com
+
+My output, see image below
+
+![Alt text](Images/project%201.%20lamp%20launched.png)
+
+
+You can leave this file in place as a temporary landing page for your application until you set up an index.php file to replace it. Once you do that, remember to remove or rename the index.html file from your document root, as it would take precedence over an index.php file by default.
+
+
+## STEP 5 — ENABLE PHP ON THE WEBSITE
+
+
+With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
+
+In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+
+    sudo vim /etc/apache2/mods-enabled/dir.conf
+
+type 'i' to insert code below
+
+    <IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+    </IfModule>
+
+After saving and closing the file with `esc`, `:`, `wq`, you will need to reload Apache so the changes take effect:  
+
+    sudo systemctl reload apache2
+
+Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
+
+Now that you have a custom location to host your website’s files and folders, we’ll create a PHP test script to confirm that Apache is able to handle and process requests for PHP files.
+
+Create a new file named index.php inside your custom web root folder:
+
+    vim /var/www/projectlamp/index.php
 
 
 
