@@ -898,6 +898,20 @@ Create a new file named index.php inside your custom web root folder:
 
     vim /var/www/projectlamp/index.php
 
+This will open a blank file. Add the following text, which is valid PHP code, inside the file:
+
+    <?php phpinfo(); ?>
+
+Save the file and exit the editor.
+
+Open a web browser and navigate to http://\<your-server-IP>/info.php.
+
+My output, see image below
+
+![Alt text](Images/php%20page.png)
+
+
+
 
 
 
