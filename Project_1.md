@@ -603,7 +603,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 <!-- WEB STACK (LAMP) IMPLIMENTATION IN AWS PREREQUISITES-->
 
 
-# Web stack (LAMP) implimentation in prerequisites in AWS
+# Web stack (LAMP) implimentation prerequisites in AWS
 
 ## Step 0 – Preparing prerequisites
 
