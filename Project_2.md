@@ -79,3 +79,11 @@ To install Nginx, run the following command:
     
     sudo apt install nginx
 
+To verify that nginx was successfully installed and is running as a service in Ubuntu, run:
+
+    sudo systemctl status nginx
+
+Nginx successfully insatlled, see image below:    
+
+![Alt text](Project2_images/nginx%20installed1.png)
+
