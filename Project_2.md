@@ -481,7 +481,7 @@ Now you can create a PHP script that will connect to MySQL and query for your co
 
 The following PHP script connects to the MySQL database and queries for the content of the todo_list table, displays the results in a list. If there is a problem with the database connection, it will throw an exception.
 
-Copy this content into your todo_list.php script:
+Copy this content into your todo_list.php script, change the username and password in the script below to match with yours if you used something different:
 
     <?php
     $user = "example_user";
@@ -507,7 +507,9 @@ You can now access this page in your web browser by visiting the domain name or 
 
     http://<Public_domain_or_IP>/todo_list.php
 
-You should see a page like this, showing the content you’ve inserted in your test table:
+You should see a page like this, showing the content you’ve inserted in your test table. My page loaded succesfully, see image below:
+
+![Alt text](Project2_images/todo%20display.png)
 
 
 
