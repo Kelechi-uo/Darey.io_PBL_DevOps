@@ -277,7 +277,7 @@ This will create a new blank file. Paste in the following bare-bones configurati
 
     server {
         listen 80;
-        server_name projectLEMP 52-38-140-208;
+        server_name projectLEMP 52.38.140.208;
         root /var/www/projectLEMP;
 
         index index.html index.htm index.php;
