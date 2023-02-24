@@ -453,31 +453,23 @@ This will give you the following output:
 Next, we’ll create a test table named todo_list. From the MySQL console, run the following statement:
 
     CREATE TABLE example_database.todo_list (
-    mysql>     item_id INT AUTO_INCREMENT,
-    mysql>     content VARCHAR(255),
-    mysql>     PRIMARY KEY(item_id)
-    mysql> );
+      item_id INT AUTO_INCREMENT,
+      content VARCHAR(255),
+      PRIMARY KEY(item_id)
+    );
 
 Insert a few rows of content in the test table. You might want to repeat the next command a few times, using different VALUES:
 
-    mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+    mysql> INSERT INTO example_database.todo_list (content) VALUES ('My first important item');
+
 
 To confirm that the data was successfully saved to your table, run:
 
     mysql>  SELECT * FROM example_database.todo_list;
 
-You’ll see the following output:
+This is my  output below:
 
-    Output
-    +---------+--------------------------+
-    | item_id | content                  |
-    +---------+--------------------------+
-    |       1 | My first important item  |
-    |       2 | My second important item |
-    |       3 | My third important item  |
-    |       4 | and this one more thing  |
-    +---------+--------------------------+
-    4 rows in set (0.000 sec)
+![Alt text](Project2_images/mysql%20added%20contents.png)
 
 After confirming that you have valid data in your test table, you can exit the MySQL console:
 
