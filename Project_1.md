@@ -180,7 +180,7 @@ let’s check the new permission on this file:
 
     ls -l new_file.txt
 
-![Alt text](Images/ls%20-l%20new_file_2.png)![Alt text](Project1_images/ls%20-l%20new_file_2.png)
+![Alt text](Project1_images/ls%20-l%20new_file_2.png)
 
 The existing permissions have been removed, and the new permissions have been set, as we expected.
 
@@ -192,7 +192,7 @@ Let’s say we have a script file that we have finished editing. We need to make
 
     ls -l new_script.sh
 
-![Alt text](Images/ls%20-l%20new_script.png)
+![Alt text](Project1_images/ls%20-l%20new_script.png)
 
 We can add the execute permission for everyone with the following command:
 
@@ -200,7 +200,7 @@ We can add the execute permission for everyone with the following command:
 
     chmod a+x new_script.sh
 
-![Alt text](Images/chmod%20a+x%20new_script.png)    
+![Alt text](Project1_images/chmod%20a+x%20new_script.png)    
 
 If we take a look at the permissions, we’ll see that the execute permission is now granted to everyone, and the existing permissions are still in place.
 
@@ -208,7 +208,7 @@ If we take a look at the permissions, we’ll see that the execute permission is
 
     ls -l new_script.sh
 
-![Alt text](Images/ls%20-l%20new_script_2.png)
+![Alt text](Project1_images/ls%20-l%20new_script_2.png)
 
 We could have achieved the same thing without the `a` in the `a` `+` `x` statement. The following command below would have worked just as well.
 
@@ -226,7 +226,7 @@ These are the files in the current directory:
 
     ls -l
 
-![Alt text](Images/ls%20-l_1.png)
+![Alt text](Project1_images/ls%20-l_1.png)
 
 Let’s say we want to remove the read permissions for the “other” users from files that have a “.page” extension. We can do this with the following command:
 
@@ -234,7 +234,7 @@ Let’s say we want to remove the read permissions for the “other” users fro
 
     chmod o-r *.page
 
-![Alt text](Images/chmod%20o-r%20.png)
+![Alt text](Project1_images/chmod%20o-r%20.png)
 
 Let’s check what effect that has had:
 
@@ -242,7 +242,7 @@ Let’s check what effect that has had:
 
     ls -l
 
-![Alt text](Images/ls%20-l_2.png)
+![Alt text](Project1_images/ls%20-l_2.png)
 
 As we can see, the read permission has been removed from the “.page” files for the “other” category of users. No other files have been affected.
 
@@ -286,7 +286,7 @@ The following command will accomplish this:
 
     chmod 664 *.page
 
-![Alt text](Images/chmod%20664.png)
+![Alt text](Project1_images/chmod%20664.png)
 
 This sets the permissions we require for the user, group members, and others to what we require. The users and group members have their permissions reset to what they already were, and the others have the read permission restored.
 
@@ -294,7 +294,7 @@ This sets the permissions we require for the user, group members, and others to 
   
     ls -l
 
-![Alt text](Images/ls%20-l_3.png)
+![Alt text](Project1_images/ls%20-l_3.png)
 
 ---
 
@@ -337,7 +337,7 @@ To list the groups you are in, you can use the groups command.
 
     groups
 
-![Alt text](Images/groups.png)
+![Alt text](Project1_images/groups.png)
 
 To get a list of the groups, their numerical IDs, and your UID and GID, use the id command:
 
@@ -345,7 +345,7 @@ To get a list of the groups, their numerical IDs, and your UID and GID, use the 
 
     id
 
-![Alt text](Images/id.png)
+![Alt text](Project1_images/id.png)
 
 You can use some options with ID to refine the output.
 
@@ -371,7 +371,7 @@ id -nu
 ```
 id -ng
 ```
-![Alt text](Images/id_2.png)
+![Alt text](Project1_images/id_2.png)
 
 ## Viewing User and Group Ownership of a File
 
@@ -381,7 +381,7 @@ To see the owners of a file or directory, use the `-l` (long listing) option wit
 
     ls -l
 
-![Alt text](Images/ls_3.png)
+![Alt text](Project1_images/ls_3.png)
 
 We can see that the name dave appears twice in the listing. The left-most appearance tells us the file owner is a user called dave. The right-most dave tells us the file belongs to a group that is also called dave.
 
@@ -393,11 +393,11 @@ This executable file is owned by the user mary and the group the file belongs to
 
     ls -l
 
-![Alt text](Images/ls%20-l_4.png)
+![Alt text](Project1_images/ls%20-l_4.png)
 
 This file is owned by the user oscar , but the group that the file belongs to is called researchlab. This means that other members of the researchlab group may access this file, according to the file permissions that have been set for the members of that group.
 
-![Alt text](Images/ls_5.png)
+![Alt text](Project1_images/ls_5.png)
 
 ## Changing User Ownership
 
@@ -407,7 +407,7 @@ Let’s work through some examples. This command will change the user ownership 
 
     sudo chown mary while.c
 
-![Alt text](Images/sudo%20chown%20mary%20while.png)
+![Alt text](Project1_images/sudo%20chown%20mary%20while.png)
 
 We can use ls to see the changes to the file properties.
 
@@ -415,7 +415,7 @@ We can use ls to see the changes to the file properties.
 
     ls -l while.c
 
-![Alt text](Images/ls%20-l%20while.png)
+![Alt text](Project1_images/ls%20-l%20while.png)
 
 You can use chown to change the ownership of several files at once.
 
@@ -423,7 +423,7 @@ You can use chown to change the ownership of several files at once.
 
     sudo chown mary getval.c global.c goto.c
 
-![Alt text](Images/sudo%20chown%20mary%20getval.c%20global.c%20goto.png)
+![Alt text](Project1_images/sudo%20chown%20mary%20getval.c%20global.c%20goto.png)
 
 This changes the user ownership of all three files.
 
@@ -431,7 +431,7 @@ This changes the user ownership of all three files.
 
     ls -l getval.c global.c goto.c
 
-![Alt text](Images/ls%20-l%20getval.c%20global.c%20goto.png)  
+![Alt text](Project1_images/ls%20-l%20getval.c%20global.c%20goto.png)  
 
 You can use wildcards to select groups of files. This command will change the user ownership of all files beginning with the letter “c.”
 
@@ -447,7 +447,7 @@ All of the files will now have mary as their owner. Note that none of the group 
 
     ls -l mary c*.*
 
-![Alt text](Images/ls%20-l%20mary%20c*.*.png)    
+![Alt text](Project1_images/ls%20-l%20mary%20c*.*.png)    
 
 Let’s change the ownership of a directory. We simply pass the directory name to chown instead of a filename.
 
@@ -455,7 +455,7 @@ Let’s change the ownership of a directory. We simply pass the directory name t
 
     sudo chown mary ./archive/
 
-![Alt text](Images/sudo%20chown%20mary%20.:archive:.png)
+![Alt text](Project1_images/sudo%20chown%20mary%20.:archive:.png)
 
 To check the ownership properties of the directory we use `ls`, but also use the `-d` (directory) option to it. This lists the properties of the directory, not the files inside it.
 
@@ -463,7 +463,7 @@ To check the ownership properties of the directory we use `ls`, but also use the
 
     ls -l -d ./archive/
 
-![Alt text](Images/ls%20-l%20-d%20.:archive:.png)
+![Alt text](Project1_images/ls%20-l%20-d%20.:archive:.png)
 
 To change the ownership of all the files in a directory, you can use the `-R` (recursive) option. This option will change the user ownership of all files within the archive folder.
 
@@ -471,7 +471,7 @@ To change the ownership of all the files in a directory, you can use the `-R` (r
 
     sudo chown -R mary ./archive/
 
-![Alt text](Images/sudo%20chown%20-R%20mary%20.:archive:.png)
+![Alt text](Project1_images/sudo%20chown%20-R%20mary%20.:archive:.png)
 
 Now let’s look at the files in the archive directory.
 
@@ -479,7 +479,7 @@ Now let’s look at the files in the archive directory.
 
     ls -l ./archive/
 
-![Alt text](Images/ls%20-l%20.:archive:.png)
+![Alt text](Project1_images/ls%20-l%20.:archive:.png)
 
 As expect, all of the files now belong to mary.
 
@@ -493,7 +493,7 @@ To change the group ownership at the same time as you change the user ownership,
 
     sudo chown mary:researchlab charm.c
 
-![Alt text](Images/sudo%20chown%20mary-researchlab%20charm.png)
+![Alt text](Project1_images/sudo%20chown%20mary-researchlab%20charm.png)
 
 The user owner and the group that the file belongs have both been changed.
 
@@ -501,7 +501,7 @@ The user owner and the group that the file belongs have both been changed.
 
     ls -l charm.c
 
-![Alt text](Images/ls%20-l%20charmc.png)
+![Alt text](Project1_images/ls%20-l%20charmc.png)
 
 A shorthand way to change the group ownership to the current group of the new owner, just provide the colon and omit the group name.
 
@@ -509,13 +509,13 @@ A shorthand way to change the group ownership to the current group of the new ow
 
     sudo chown mary: caps.c
 
-![Alt text](Images/sudo%20chown%20mary-%20capsc.png)
+![Alt text](Project1_images/sudo%20chown%20mary-%20capsc.png)
 
 `Bash`
 
     ls -l caps.c
 
-![Alt text](Images/ls%20-l%20capsc.png)
+![Alt text](Project1_images/ls%20-l%20capsc.png)
 
 Both user ownership and group ownership have been changed to mary.
 
@@ -525,13 +525,13 @@ To change the group ownership only, precede it with a colon and omit the user na
 
     sudo chown :researchlab at.c
 
-![Alt text](Images/sudo%20chown%20-researchlab%20atc.png)
+![Alt text](Project1_images/sudo%20chown%20-researchlab%20atc.png)
 
 `Bash`
 
     ls -l at.c
 
-![Alt text](Images/ls%20-l%20atc.png)
+![Alt text](Project1_images/ls%20-l%20atc.png)
 
 The group ownership has been changed, but the user ownership remains the same.
 
@@ -543,13 +543,13 @@ You can use the numerical UID and GID values with the chown command. This comman
 
     sudo chown 1001:1001 at.c
 
-![Alt text](Images/sudo%20chown%201001-1001%20atc.png)
+![Alt text](Project1_images/sudo%20chown%201001-1001%20atc.png)
 
 `Bash`
 
     ls -l at.c
 
-![Alt text](Images/ls%20-l%20atc2.png)
+![Alt text](Project1_images/ls%20-l%20atc2.png)
 
 ## Possession is Nine-Tenths of the Law
 
@@ -614,7 +614,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
     * Succefully setup AWS account, and provisioned Ubuntu server in AWS. See image below
 
-    ![Alt text](Images/EC2_Ubuntu_20.04.png)
+    ![Alt text](Project1_images/EC2_Ubuntu_20.04.png)
 
 
 <!-- connect to EC2 Instance (aws virtuall Ubuntu server) -->
@@ -625,7 +625,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
     * Succefully connected to EC2 Instance (AWS virtuall Ubuntu server), see image below
 
-   ![Alt text](Images/aws%20ec2_ubuntu_connection.png) 
+   ![Alt text](Project1_images/aws%20ec2_ubuntu_connection.png) 
 
 
 
@@ -641,7 +641,7 @@ It's worth noting that these are default ports, and they can be changed dependin
 
 Updated successfully, see image below
 
-![Alt text](Images/sudo%20apt%20update.png)
+![Alt text](Project1_images/sudo%20apt%20update.png)
 
 * run apache2 package installation
 
@@ -651,9 +651,9 @@ Updated successfully, see image below
 
 Apache2 package installed successfully, see image below
 
-![Alt text](Images/1_sudo%20apt%20install%20apache2.png)
+![Alt text](Project1_images/1_sudo%20apt%20install%20apache2.png)
 
-![Alt text](Images/2_apache2%20install.png)
+![Alt text](Project1_images/2_apache2%20install.png)
 
 * To verify that apache2 is running as a Service in our OS, use following command
 
@@ -663,7 +663,7 @@ Apache2 package installed successfully, see image below
 
 Apache2 running as a service in OS verified, see image below.
 
-![Alt text](Images/apache2%20confirm%20status.png)
+![Alt text](Project1_images/apache2%20confirm%20status.png)
 
 * Our server is running and we can access it locally and from the Internet (Source 0.0.0.0/0 means ‘from any IP address’).
 
@@ -676,7 +676,7 @@ These 2 commands above actually do pretty much the same – they use ‘curl’ 
 
 As an output you can see some strangely formatted test, do not worry, we just made sure that our Apache web service responds to ‘curl’ command with some payload. See image below
 
-![Alt text](Images/apache%20server%20http%20test%20in%20ubuntu%20shell.png)
+![Alt text](Project1_images/apache%20server%20http%20test%20in%20ubuntu%20shell.png)
 
 Now it is time for us to test how our Apache HTTP server can respond to requests from the Internet.
 Open a web browser of your choice and try to access following url
@@ -689,7 +689,7 @@ Another way to retrieve your Public IP address, other than to check it in AWS We
 
 Revealed my EC2 Public IP Address, see below
 
-![Alt text](Images/reveal%20ec2%20ip.png)
+![Alt text](Project1_images/reveal%20ec2%20ip.png)
 
 Now that i have my AWS EC2 virtual server IP, i will run the ip address below to test how our Apache HTTP server can respond to requests from the Internet.
 
@@ -697,7 +697,7 @@ Now that i have my AWS EC2 virtual server IP, i will run the ip address below to
 
 Apache2 default page loaded succesfully, see image below
 
-![Alt text](Images/apache2%20default%20page.png)
+![Alt text](Project1_images/apache2%20default%20page.png)
 
 
 ## STEP 2 — INSTALLING MYSQL
@@ -716,9 +716,9 @@ When prompted, confirm installation by typing Y, and then ENTER.
 
 mysql-server installation completed, see image below
 
-![Alt text](Images/1_mysql%20install.png)
+![Alt text](Project1_images/1_mysql%20install.png)
 
-![Alt text](Images/2_mysql%20install.png)
+![Alt text](Project1_images/2_mysql%20install.png)
 
 <!-- Login to Mysql console -->
 
@@ -728,7 +728,7 @@ When the installation is finished, log in to the MySQL console by typing:
 
 Mysql server setup with password validation completed, see image below
 
-![Alt text](Images/Screen%20Shot%202023-02-15%20at%203.17.51%20PM.png)
+![Alt text](Project1_images/Screen%20Shot%202023-02-15%20at%203.17.51%20PM.png)
 
 
 ## STEP 3 — INSTALLING PHP
@@ -749,7 +749,7 @@ Once the installation is finished, you can run the following command to confirm 
 
 PHP installed successfully, see image below
 
-![Alt text](Images/php%20version%20revealed.png)
+![Alt text](Project1_images/php%20version%20revealed.png)
 
 
 At this point, my LAMP stack is completely installed and fully operational.
@@ -804,7 +804,7 @@ You can use the `ls` command to show the new file in the sites-available directo
 
 My output, see image below    
 
-![Alt text](Images/apache%20sites%20available%20output.png)
+![Alt text](Project1_images/apache%20sites%20available%20output.png)
 
 With this VirtualHost configuration, we’re telling Apache to serve projectlamp using /var/www/projectlampl as its web root directory. If you would like to test Apache without a domain name, you can remove or comment out the options ServerName and ServerAlias by adding a # character in the beginning of each option’s lines. Adding the # character there will tell the program to skip processing the instructions on those lines.
 
@@ -814,7 +814,7 @@ You can now use a2ensite command to enable the new virtual host:
 
 my output, see below
 
-![Alt text](Images/a2ensite%20projectlamp.png)
+![Alt text](Project1_images/a2ensite%20projectlamp.png)
 
 You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
@@ -826,13 +826,13 @@ To make sure your configuration file doesn’t contain syntax errors, run:
 
 my output, see below image
 
-![Alt text](Images/syntax%20ok.png)
+![Alt text](Project1_images/syntax%20ok.png)
 
 Finally, reload Apache so these changes take effect:
 
     sudo systemctl reload apache2
 
-![Alt text](Images/sys%20reload.png)    
+![Alt text](Project1_images/sys%20reload.png)    
 
 
 Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
@@ -841,7 +841,7 @@ Your new website is now active, but the web root /var/www/projectlamp is still e
 
 My output, see image below
 
-![Alt text](Images/public%20hostname.png)
+![Alt text](Project1_images/public%20hostname.png)
 
 Now go to your browser and try to open your website URL using IP address:
 
@@ -851,7 +851,7 @@ My IP: http://54.218.34.81:80
 
 My output, see image below
 
-![Alt text](Images/project%201.%20lamp%20launched.png)
+![Alt text](Project1_images/project%201.%20lamp%20launched.png)
 
 You can also access your website in your browser by public DNS name, not only by IP – try it out, the result must be the same (port is optional)
 
@@ -861,7 +861,7 @@ My public DNS name: ec2-54-218-34-81.us-west-2.compute.amazonaws.com
 
 My output, see image below
 
-![Alt text](Images/project%201.%20lamp%20launched.png)
+![Alt text](Project1_images/project%201.%20lamp%20launched.png)
 
 
 You can leave this file in place as a temporary landing page for your application until you set up an index.php file to replace it. Once you do that, remember to remove or rename the index.html file from your document root, as it would take precedence over an index.php file by default.
@@ -907,7 +907,7 @@ Open a web browser and navigate to http://\<your-server-IP>/info.php.
 
 My output, see image below
 
-![Alt text](Images/php%20page.png)
+![Alt text](Project1_images/php%20page.png)
 
 This page provides information about your server from the perspective of PHP. It is useful for debugging and to ensure that your settings are being applied correctly.
 
@@ -923,23 +923,3 @@ You can always recreate this page if you need to access the information again la
 Credit: This guide was inspired by Digital Ocean
 
 Congratulations! You have finished your very first REAL LIFE PROJECT by deploying a LAMP stack website in AWS Cloud!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[Ls -L.png]: Project1_images/Ls%20-L.png
