@@ -162,7 +162,7 @@ Let’s say we have a file where everyone has full permissions on it.
 
    
 
-![Alt text][ls -l new_file.png]
+![Alt text](Project1_images/ls%20-l%20new_%20file.png)
 
 We want the user dave to have read and write permissions and the group and other users to have read permissions only. We can do using the following command:
 
@@ -171,8 +171,7 @@ We want the user dave to have read and write permissions and the group and other
     chmod u=rw,og=r new_file.txt
 
 
-![Alt text](Images/chmod%20u=rw,og=r%20new_file.png)
-
+![Alt text](Project1_images/chmod%20u=rw,og=r%20new_file.png)
 Using the `=` operator means we wipe out any existing permissions and then set the ones specified.
 
 let’s check the new permission on this file:
@@ -181,7 +180,7 @@ let’s check the new permission on this file:
 
     ls -l new_file.txt
 
-![Alt text](Images/ls%20-l%20new_file_2.png)
+![Alt text](Images/ls%20-l%20new_file_2.png)![Alt text](Project1_images/ls%20-l%20new_file_2.png)
 
 The existing permissions have been removed, and the new permissions have been set, as we expected.
 
