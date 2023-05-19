@@ -70,7 +70,7 @@ We can use the `-l` (long format) option to have `ls` list the file permissions 
     ls -l
 
 
-![Output][Ls -L.png]
+![alt text][Ls -L.png]
 
 On each line, the first character identifies the type of entry that is being listed. If it is a dash `-` it is a file. If it is the letter `d` it is a directory.
 
