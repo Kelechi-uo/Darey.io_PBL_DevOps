@@ -162,7 +162,7 @@ Let’s say we have a file where everyone has full permissions on it.
 
    
 
-![Alt text](Images/ls%20-l%20new_%20file.png)    
+![Alt text][ls -l new_file.png]
 
 We want the user dave to have read and write permissions and the group and other users to have read permissions only. We can do using the following command:
 
