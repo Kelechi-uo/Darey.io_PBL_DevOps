@@ -53,7 +53,7 @@ chmod is a command in Unix-like operating systems that stands for "change mode" 
 
 ## Key Take Away
 
-Chmod takes three main arguments: `r`, `w`, and `x`, which stand for read, write, and execute, respectively. Adding or removing combinations of the arguments controls file and folder permissions. For example, `chmod +rwx` adds permission to read, write, and execute scripts. Running `chmod -wx` removes the ability to write and execute.
+Chmod takes three main arguments: `r`, `w`, and `x`, which stand for read, write, and execute, respectively. Adding or removing combinations of the arguments controls file and folder permissions. For example, `chmod +rwx` adds permission to read, write, and execute scripts or programs. Running `chmod -wx` removes the ability to write and execute.
 
 ## chmod Modifies File Permissions
 
