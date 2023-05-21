@@ -481,7 +481,7 @@ Now let’s look at the files in the archive directory.
 
 ![Alt text](Project1_images/ls%20-l%20.:archive:.png)
 
-As expect, all of the files now belong to mary.
+As expected, all of the files now belong to mary.
 
 ## Changing Group Ownership
 
