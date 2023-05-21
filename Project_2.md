@@ -1,5 +1,6 @@
 
-# PROJECT 2 - WEB STACK IMPLEMENTATION (LEMP STACK)
+# PROJECT 2 - WEB STACK IMPLEMENTATION (LEMP STACK). The LEMP stack is a collection of Linux OS, Nginx Server, MySQL Database, and PHP.
+
 
 ## SIDE SELF STUDY:
 

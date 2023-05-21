@@ -1,5 +1,5 @@
 
-# PROJECT 1 - WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+# PROJECT 1 - WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS. The LAMP (Linux, Apache, MySQL, PHP/Perl/Python) is an acronym denoting one of the most common software stacks for many of the web's most popular applications. 
 
 ## SIDE SELF STUDY:
 
@@ -29,17 +29,31 @@ The SDLC provides a structured approach to software development and helps to ens
 
 # What is LAMP?
 
-LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP. It refers to a software stack that is used to build dynamic websites and web applications. The components of the LAMP stack are:
+LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP/Perl/Python. It refers to a software stack that is used to build dynamic websites and web applications. The architecture of the components of the LAMP stack are:
 
-1. Linux: A free and open-source operating system that is the foundation of the LAMP stack.
+1. Operating system  
 
-2. Apache: An open-source web server software that is used to serve web pages and run web applications.
+   **Linux** is the operating system (OS) and foundation of the LAMP stack. Launched in 1991, Linux is a free and open source OS that enjoys extensive popularity worldwide. It’s flexible and customizable, as it is open source, giving organizations the ability to modify the source code to fit their needs. The other three pieces of the LAMP stack sit atop the Linux OS.
 
-3. MySQL: A popular open-source relational database management system used to store and manage data for websites and web applications.
+2. Web server  
+   **Apache**: Apache HTTP Server is a web server software that delivers web content though the internet. Launched in 1995, Apache has grown to be one of the most popular web servers in the world. As the second layer in the LAMP stack, Apache processes client requests over the internet. Using Hypertext Transfer Protocol (HTTP) it accepts incoming HTTP requests and then serves the relevant web content. Since Apache is open source, this strong ecosystem has built many modules that extend the functionality of Apache. These modules can include authentication, encryption, diagnostics, logging, and more. 
 
-4. PHP: A server-side scripting language used to build dynamic websites and web applications. It is used to write scripts that interact with databases, generate HTML pages, and perform other tasks.
+3. Database  
+   **MySQL** is an open source relational database for storing application data. Launched in 1996, MySQL is now the second most popular database in the world, according to DB-Engines. The LAMP stack uses MySQL to store, manage, and query information in the database. Information can include user accounts, user details, product names, customer records, sales, applications, and more. Using Structured Query Language (SQL), users can easily access and manipulate information stored in the database.
+
+
+
+4. Programming language  
+   Originally, the **“P”** in LAMP was used to refer to **PHP**, a programming language launched in 1995 that helps you create dynamic web pages. Over time, the **“P”** has been expanded to include **non-PHP** languages like **Python** and **Perl** that have also become more popular for web development.
+
+   Websites today require dynamic capabilities to display real-time or updated information. Since HTML cannot perform dynamic processes, you can embed PHP, Perl, or Python code into the parts of the website that require this capability. HTML can be used for the layout of the website, while PHP, Perl, or Python is used for obtaining real-time information, such as checking the latest inventory on an e-commerce website.
+---
+## How it works  
+You will find a simplified workflow below for a user searching for “baseball scores” on a dynamic website running the LAMP stack. Each of the layers is running on Linux as the foundational element of the stack.
 
 Together, these components form a complete solution for building and running web applications. The LAMP stack is popular because it is open-source, flexible, and provides a cost-effective solution for small and medium-sized businesses. It is also scalable, meaning that it can grow with a business's needs.
+
+# What is LAMP?
 
 --- 
 
