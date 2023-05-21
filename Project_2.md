@@ -480,7 +480,7 @@ After confirming that you have valid data in your test table, you can exit the M
 
     mysql> exit
 
-Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web root directory using your preferred editor. We’ll use vi for that:
+Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web root directory using your preferred editor. We’ll use nano editor for that:
 
     nano /var/www/projectLEMP/todo_list.php
 
