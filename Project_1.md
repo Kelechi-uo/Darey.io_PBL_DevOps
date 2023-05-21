@@ -29,6 +29,8 @@ The SDLC provides a structured approach to software development and helps to ens
 
 # What is LAMP?
 
+Check source [here](https://cloud.google.com/mysql/lamp)
+
 LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP/Perl/Python. It refers to a software stack that is used to build dynamic websites and web applications. The architecture of the components of the LAMP stack are:
 
 1. Operating system  
@@ -49,11 +51,26 @@ LAMP is an acronym that stands for Linux, Apache, MySQL, and PHP/Perl/Python. It
    Websites today require dynamic capabilities to display real-time or updated information. Since HTML cannot perform dynamic processes, you can embed PHP, Perl, or Python code into the parts of the website that require this capability. HTML can be used for the layout of the website, while PHP, Perl, or Python is used for obtaining real-time information, such as checking the latest inventory on an e-commerce website.
 ---
 ## How it works  
-You will find a simplified workflow below for a user searching for “baseball scores” on a dynamic website running the LAMP stack. Each of the layers is running on Linux as the foundational element of the stack.
+You will find a simplified workflow below for a user searching for “baseball scores” on a dynamic website running the LAMP stack. Each of the layers is running on Linux as the foundational element of the stack.  
 
-Together, these components form a complete solution for building and running web applications. The LAMP stack is popular because it is open-source, flexible, and provides a cost-effective solution for small and medium-sized businesses. It is also scalable, meaning that it can grow with a business's needs.
+![Alt text](Project1_images/LAMP%20WORKFLOW.png)
 
-# What is LAMP?
+Together, these components form a complete solution for building and running web applications.
+
+## Benefits of using LAMP Stack  
+The common reasons why developers choose a LAMP stack to build web applications include:  
+
+**Cost**  
+One of the main drivers of LAMP usage is that it’s free and open source. That means that developers can get started without having to pay licensing fees for proprietary software. This dramatically lowers the cost of piloting, building, deploying, and managing web applications.
+
+**Efficiency**  
+Since the components of the LAMP stack have been around for almost 30 years, LAMP provides a tried-and-tested web development solution. Developers can take advantage of existing best practices, code, and tools to save time and effort.
+
+**Flexibility**  
+Since LAMP is open source, you have the flexibility to choose the right components to fit your needs and business requirements. The LAMP ecosystem provides powerful building blocks, such as code samples, modules, and extensions that can be customized and mixed and matched for your needs. It is also scalable, meaning that it can grow with a business's needs.
+
+**Community**  
+Due to the popularity of LAMP, you benefit from a large, global community of experienced professionals that provide help and support during each phase of your project. This strong, active community allows for greater sharing of best practices, tools, resources and faster, more consistent release cycles.
 
 --- 
 
