@@ -47,7 +47,11 @@ These are just a few examples of SQL syntax and commands. SQL has many other com
 
 <!-- Step 1 - Installing the Nginx web server -->
 
-# Web stack (LEMP) implimentation in AWS
+# Web stack (LEMP) implimentation in AWS.
+
+## INTRODUCTION – WHAT IS LEMP?  
+
+The LEMP software stack is a group of software that can be used to serve dynamic web pages and web applications written in PHP. This is an acronym that describes a Linux operating system, with an Nginx (pronounced like “Engine-X”) web server. The backend data is stored in the MySQL database and the dynamic processing is handled by PHP.
 
 ## STEP 1 – INSTALLING THE NGINX WEB SERVER
 
