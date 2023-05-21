@@ -371,7 +371,7 @@ Your LEMP stack is now fully configured. In the next step, we’ll create a PHP 
 
 Your LEMP stack should now be completely set up.
 
-At this point, your LAMP stack is completely installed and fully operational.
+At this point, your LEMP stack is completely installed and fully operational.
 
 You can test it to validate that Nginx can correctly hand `.php` files off to your PHP processor.
 
