@@ -409,7 +409,7 @@ Let’s work through some examples. This command will change the user ownership 
 
 ![Alt text](Project1_images/sudo%20chown%20mary%20while.png)
 
-We can use ls to see the changes to the file properties.
+We can use `ls` to see the changes to the file properties.
 
 `Bash`
 
