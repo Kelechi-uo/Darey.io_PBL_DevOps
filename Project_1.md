@@ -439,7 +439,7 @@ You can use wildcards to select groups of files. This command will change the us
 
     sudo chown mary c*.*
 
-![Alt text](Images/sudo%20chown%20mary%20c*.*.png)
+![Alt text](Project1_images/sudo%20chown%20mary%20c*.*.png)
 
 All of the files will now have mary as their owner. Note that none of the group ownerships have been changed.
 
