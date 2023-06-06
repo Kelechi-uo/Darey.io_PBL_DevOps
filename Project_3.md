@@ -117,3 +117,23 @@ Examples of well-known DBMSes include:
 
 ![Alt text](Project3_images/cassandra.svg)  
 Apache Cassandra – an open-source distributed database management system known for being able to handle massive amounts of data.
+
+&nbsp;
+
+![Alt text](Project3_images/filemaker.svg)  
+Filemaker – a low-code/no-code (LCNC) relational DBMS.
+
+&nbsp;
+
+![Alt text](Project3_images/Google-Cloud-Spanner.svg)  
+Google Cloud Spanner — a globally distributed, horizontally scalable, and strongly consistent relational database service offered by Google Cloud.
+
+&nbsp;
+
+![Alt text](Project3_images/ibmdb2.svg)  
+IBM Db2 — a family of relational database management systems developed by IBM that offers various editions for different environments and workloads.
+
+&nbsp;
+
+![Alt text](Project3_images/mariadb.svg)  
+MariaDB – an open-source relational database fork of MySQL.
