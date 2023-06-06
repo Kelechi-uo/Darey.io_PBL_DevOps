@@ -72,3 +72,37 @@ The terms “database” and “database management system” are often used int
 
 To differentiate between the two terms and use them correctly, it’s helpful to understand their respective roles and functionalities: A database is a structured collection of data. The database management system is the software that developers, end users and applications use to interact with a database.
 
+![Alt text](Project3_images/dbms.png)
+
+## Types of Database Management Systems
+
+Until the turn of the century, database management systems were classified as either being relational or non-relational, depending on their structure and uses. If the DBMS stored data in tables, it was referred to as a relational DBMS (RDBMS). If it did not store data in tables, it was referred to as a NoSQL or non-relational DBMS.
+
+Today, database management systems are still categorized as being either RDBMS or non-RDBMS, but they are also classified by the unique advantages they provide. Types of DBMSs include:
+
+**Cloud Database Management Systems** – Cloud DBMSs like Amazon Aurora are designed to manage distributed data stored in a cloud provider’s remote data centers. 
+
+**Columnar Database Management Systems** – Columnar DBMSs like Apache Cassandra return queries faster by storing data in columns instead of rows. This schema makes it easier for data analytics and business intelligence applications to work with large datasets.
+
+**Distributed Database Management Systems** – DDBMS functionalities like those found in the Apache Hadoop ecosystem are designed to ensure data integrity for logically-related databases across multiple locations or computing environments. 
+
+**Graph Database Management Systems** – These systems are designed to support graph databases that store relationships at the individual record level. Graph DBMSs like Neo4j are ideal for managing data with interconnected relationships, such as social media data. 
+
+**Hierarchical Database Management Systems** – Hierarchical management systems are designed to support databases organized in parent-child relationships. This type of DBMS has its roots in mainframe computing and its uses today are limited. 
+
+**HTAP Database Management Systems** – Hybrid transaction/analytical processing DBMSs are designed to support mixed workloads for transactional and analytical data. Traditional database systems often have separate systems for online transaction processing (OLTP) and online analytical processing (OLAP) workloads. HTAP management systems like SAP HANA and CockroachDB provide a unified platform that can handle both types of tasks concurrently.
+
+**In-memory Database Management Systems** – In-memory management systems are designed to reduce latency by using main memory for data management and storage. Volt Active Data and other IMDBMSs make data retrieval significantly faster and improve overall system performance.
+
+**Object-oriented database management system** (OODBMS) – db4o is one example of this type of DBMS. OODMBSs are designed to manage complex data structures as storage objects. 
+
+**NewSQL Database Management Systems** — NewSQL DBMSs like PostgreSQL provide the scalability and performance benefits of NoSQL databases while retaining the ACID properties of traditional relational databases. This type of DBMS is designed for large-scale distributed environments and can handle high-throughput transactional workloads.
+
+**Time-Series Database Management Systems** — Time-series DBMSs like InfluxDB optimize the storage, retrieval and analysis of time-stamped data. They are often used to support financial analytics and Internet of Things (IoT) monitoring systems.
+
+## Well-Known Database Management Systems  
+
+&nbsp;  
+
+![Alt text](Project3_images/Access.svg)  
+**ACCESS** – a lightweight relational database management system (RDMS) included in Microsoft Office and Office 365.
