@@ -100,9 +100,20 @@ Today, database management systems are still categorized as being either RDBMS o
 
 **Time-Series Database Management Systems** — Time-series DBMSs like InfluxDB optimize the storage, retrieval and analysis of time-stamped data. They are often used to support financial analytics and Internet of Things (IoT) monitoring systems.
 
-## Well-Known Database Management Systems  
+## Well-Known Database Management Systems
+Examples of well-known DBMSes include: 
 
 &nbsp;  
 
 ![Alt text](Project3_images/Access.svg)  
 **ACCESS** – a lightweight relational database management system (RDMS) included in Microsoft Office and Office 365.
+
+&nbsp;
+
+![Alt text](Project3_images/Amazon-RDS.svg)  
+**Amazon RDS** – a native cloud DBMS that offers engines for managing MySQL, Oracle, SQL Server, PostgreSQL and Amazon Aurora databases.
+
+&nbsp;
+
+![Alt text](Project3_images/cassandra.svg)  
+Apache Cassandra – an open-source distributed database management system known for being able to handle massive amounts of data.
