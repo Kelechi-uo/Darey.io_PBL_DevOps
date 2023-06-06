@@ -121,19 +121,64 @@ Apache Cassandra – an open-source distributed database management system known
 &nbsp;
 
 ![Alt text](Project3_images/filemaker.svg)  
-Filemaker – a low-code/no-code (LCNC) relational DBMS.
+**Filemaker** – a low-code/no-code (LCNC) relational DBMS.
 
 &nbsp;
 
 ![Alt text](Project3_images/Google-Cloud-Spanner.svg)  
-Google Cloud Spanner — a globally distributed, horizontally scalable, and strongly consistent relational database service offered by Google Cloud.
+**Google Cloud Spanner** — a globally distributed, horizontally scalable, and strongly consistent relational database service offered by Google Cloud.
 
 &nbsp;
 
 ![Alt text](Project3_images/ibmdb2.svg)  
-IBM Db2 — a family of relational database management systems developed by IBM that offers various editions for different environments and workloads.
+**IBM Db2** — a family of relational database management systems developed by IBM that offers various editions for different environments and workloads.
 
 &nbsp;
 
 ![Alt text](Project3_images/mariadb.svg)  
-MariaDB – an open-source relational database fork of MySQL.
+**MariaDB** – an open-source relational database fork of MySQL.
+
+&nbsp;
+
+![Alt text](Project3_images/microsoftsqlserver.svg)  
+**Microsoft Azure SQL Database** — a cloud-based relational database service provided by Microsoft Azure that offers fully-managed SQL databases.
+
+&nbsp;
+
+![Alt text](Project3_images/mongodb.svg)  
+**MongoDB** — A popular NoSQL database management system that uses a document-oriented schema to provide high scalability and flexibility.
+
+&nbsp;
+
+![Alt text](Project3_images/mysql.svg)  
+**MySQL** – an open-source relational database management system (RDBMS) owned by Oracle.
+
+&nbsp;
+
+![Alt text](Project3_images/oracle.svg)  
+**Oracle** – a proprietary RDMS optimized for hybrid cloud architectures.
+
+&nbsp;
+
+![Alt text](Project3_images/postgresql.svg)  
+**PostgreSQL** — an open-source relational database management system known for its robustness, scalability and extensive feature sets.
+
+&nbsp;
+
+![Alt text](Project3_images/sap.svg)  
+**SAP HANA** — an in-memory, column-oriented RDBMS optimized for real-time data ingestion and high-performance analytics. 
+
+&nbsp;
+
+![Alt text](Project3_images/sqlazure.svg)  
+**SQL Server** – an enterprise-level relational database management system from Microsoft that is capable of handling extremely large volumes of data and database queries.
+
+&nbsp;
+
+![Alt text](Project3_images/sql-lite-1.svg)  
+**SQLite** — a lightweight, file-based relational database engine that is widely used in embedded systems and mobile applications.
+
+&nbsp;
+
+![Alt text](Project3_images/teradata.svg)  
+**Teradata** – a powerful SQL engine that provides scalable solutions for managing and analyzing large volumes of data.
