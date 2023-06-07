@@ -286,7 +286,33 @@ and Vue.js
 
 Frameworks typically set the control flow of a program and allow the user of the framework to "hook into" that flow by exposing various events.[21] This "inversion of control" design pattern is considered to be a defining principle of a framework, and benefits the code by enforcing a common flow for a team which everyone can customize in similar ways.[21] For example, some popular "microframeworks" such as Ruby's Sinatra (which inspired Express.js) allow for "middleware" hooks prior to and after HTTP requests. These middleware functions can be anything, and allow the user to define logging, authentication and session management, and redirecting.
 
+---
+
 
 ## Practice basic JavaScript syntax just for fun.
 
 Practice Javascript [here](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
+
+---
+
+## What is a REST API?
+
+Learn more from the source [here](https://www.freecodecamp.org/news/what-is-a-rest-api/)
+
+**An API** (short for Application Programming Interface) allows for two or more applications to communicate with one another and send data back and forth.
+
+**APIs** operated based on a standardized set of rules and they're an integral component of modern-day software development.
+
+There are different API styles, and each one has its unique architecture. One of the most common styles is REST.
+
+In this article, you will learn the basics of REST APIs. You will see an overview of what they are and how they work. You will also learn what makes an API RESTful.
+
+Let's get into it!
+
+**What Is A REST API?**  
+REST (short for REpresentational State Transfer) is a software architectural style created by computer scientist Roy Fielding in 2000.
+
+With REST APIs, a client requests a resource. Then the server responds to the client with a representation of the current state of that resource and all relevant information about it in a standardized format, such as JSON or XML.
+
+Learn more from the source [here](https://www.freecodecamp.org/news/what-is-a-rest-api/)
+
