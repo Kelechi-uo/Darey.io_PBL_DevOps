@@ -288,8 +288,18 @@ Frameworks typically set the control flow of a program and allow the user of the
 
 ---
 
+## Responsive Web Design with HTML and CSS
+
+While HTML(the Hypertext Markup Language)  is a markup language used to format/structure a web page, CSS is a design language that you use to make your web page look nice and presentable. CSS stands for Cascading Style Sheets, and you use it to improve the appearance of a web page.
+
+Learn more and practice from the source [here](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
+
+---
+
 
 ## Practice basic JavaScript syntax just for fun.
+
+While HTML and CSS control the content and styling of a page, JavaScript is used to make it interactive. In the JavaScript Algorithm and Data Structures Certification, you'll learn the fundamentals of JavaScript including variables, arrays, objects, loops, and functions.
 
 Practice Javascript [here](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
