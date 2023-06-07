@@ -281,3 +281,7 @@ ReactJS
 jQuery UI  
 Svelte  
 and Vue.js  
+
+## Framework Features
+
+Frameworks typically set the control flow of a program and allow the user of the framework to "hook into" that flow by exposing various events.[21] This "inversion of control" design pattern is considered to be a defining principle of a framework, and benefits the code by enforcing a common flow for a team which everyone can customize in similar ways.[21] For example, some popular "microframeworks" such as Ruby's Sinatra (which inspired Express.js) allow for "middleware" hooks prior to and after HTTP requests. These middleware functions can be anything, and allow the user to define logging, authentication and session management, and redirecting.
