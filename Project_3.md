@@ -209,3 +209,75 @@ DBMSs equipped with AI and ML capabilities can automate tasks such as query opti
 Blockchain-enabled databases can provide immutable, transparent data storage and enable secure, auditable transactions. This type of database management system eliminates the need for central authorities while still enhancing data integrity. It makes them ideal for industries like finance, supply chain and healthcare, where the risks and impacts of data tampering are significant.  
 
 DBMS with built-in stream processing capabilities are becoming vital for use cases like real-time analytics, fraud detection and personalized customer experiences.  With the rise of the Internet of Things (IoT) and streaming data sources, DBMSs will need to handle real-time data processing even more efficiently.
+
+---
+
+## Web frameworks
+
+Check source [here](https://en.wikipedia.org/wiki/Web_framework)
+
+A web framework (WF) or web application framework (WAF) is a software framework that is designed to support the development of web applications including web services, web resources, and web APIs. Web frameworks provide a standard way to build and deploy web applications on the World Wide Web. Web frameworks aim to automate the overhead associated with common activities performed in web development. For example, many web frameworks provide libraries for database access, templating frameworks, and session management, and they often promote code reuse.[1] Although they often target development of dynamic web sites, they are also applicable to static websites.[2]
+
+**History of Web Frameworks**  
+As the design of the World Wide Web was not inherently dynamic, early hypertext consisted of hand-coded HTML text files that were published on web servers. Any modifications to published pages needed to be performed by the pages' author. In 1993, the Common Gateway Interface (CGI) standard was introduced for interfacing external applications with web servers, to provide a dynamic web page that reflected user inputs.[3]
+
+Original implementations of the CGI interface typically had adverse effects on the server load however, because each request started a separate process.[4] More recent implementations utilize persistent processes amongst other techniques to reduce the footprint in the server's resources and offer a general performance boost.[citation needed]
+
+In 1995, fully integrated server/language development environments first emerged and new web-specific languages were introduced, such as ColdFusion, PHP, and Active Server Pages.[citation needed]
+
+Although the vast majority of languages for creating dynamic web pages have libraries to help with common tasks, web applications often require specific libraries for particular tasks, such as creating HTML (for example, Jakarta Server Faces).[citation needed]
+
+In the late 1990s, mature, "full stack" frameworks began to appear, that often gathered multiple libraries useful for web development into a single cohesive software stack for web developers to use. Examples of this include ASP.NET, Java EE, WebObjects, web2py, OpenACS, Catalyst, Mojolicious, Ruby on Rails, Laravel, Grails, Django, Zend Framework, Sails.js, Yii,[5] CakePHP,[6] and Symfony.
+
+## Types of framework architectures
+
+Most web frameworks are based on the model–view–controller (MVC) pattern
+
+**Model–view–controller (MVC)**  
+Many frameworks follow the MVC architectural pattern to separate the data model into business rules (the "controller") and the user interface (the "view"). This is generally considered a good practice as it modularizes code, promotes code reuse, and allows multiple interfaces to be applied. In web applications, this permits different views to be presented, for example serving different web pages for mobile vs. desktop browsers, or providing machine-readable web service interfaces.
+
+**Push-based vs. pull-based**  
+Most MVC frameworks follow a push-based architecture also called "action-based". These frameworks use actions that do the required processing, and then "push" the data to the view layer to render the results.[7] Django, Ruby on Rails, Symfony, Spring MVC, Stripes, Sails.js, CodeIgniter[8] are good examples of this architecture. An alternative to this is pull-based architecture, sometimes also called "component-based". These frameworks start with the view layer, which can then "pull" results from multiple controllers as needed. In this architecture, multiple controllers can be involved with a single view. Lift, Tapestry, JBoss Seam, Jakarta Server Faces, and Wicket are examples of pull-based architectures. Play, Struts, RIFE, and ZK have support for both push- and pull-based application controller calls.
+
+**Three-tier organization**  
+In three-tier organization, applications are structured around three physical tiers: client, application, and database.[9][10][11][12] The database is normally an RDBMS. The application contains the business logic, running on a server and communicates with the client using HTTP.[13] The client on web applications is a web browser that runs HTML generated by the application layer.[14][15] The term should not be confused with MVC, where, unlike in three-tier architecture, it is considered a good practice to keep business logic away from the controller, the "middle layer".
+
+## Framework applications
+
+Frameworks are built to support the construction of internet applications based on a single programming language, ranging in focus from general purpose tools such as Zend Framework and Ruby on Rails, which augment the capabilities of a specific language, to native-language programmable packages built around a specific user application, such as content management systems (CMS), some mobile development tools and some portal tools.
+
+**General-purpose website frameworks**  
+Web frameworks must function according to the architectural rules of browsers and protocols such as HTTP, which is stateless. Webpages are served up by a server and can then be modified by the browser using JavaScript. Either approach has its advantages and disadvantages.[citation needed]
+
+Server-side page changes typically require that the page be refreshed, but allow any language to be used and more computing power to be utilized. Client-side changes allow the page to be updated in small chunks which feels like a desktop application, but are limited to JavaScript and run in the user's browser, which may have limited computing power. Some mix of the two is typically used.[19] Applications which make heavy use of JavaScript and only refresh parts of the page, are called single-page applications and typically make use of a client-side JavaScript web framework to organize the code.
+
+**Server-side frameworks include:**  
+Apache Wicket  
+ASP.NET Core  
+CakePHP  
+Catalyst  
+CodeIgniter  
+CppCMS  
+Django  
+Flask  
+Jam.py  
+Yii  
+Laravel  
+Mojolicious  
+Ruby on Rails  
+Sails.js  
+Symfony  
+Spring MVC  
+VIEwoNLY  
+Wt (web toolkit)  
+Zend Framework
+
+**Client-side frameworks:**  
+Backbone.js  
+AngularJS  
+Angular  
+EmberJS  
+ReactJS  
+jQuery UI  
+Svelte  
+and Vue.js  
