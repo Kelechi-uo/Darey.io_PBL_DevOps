@@ -346,3 +346,11 @@ Hint #1: When you create your EC2 Instances, you can add Tag “Name” to it wi
 ## 1st action - Backend Configuration
 
 - **Update ubuntu**  `sudo apt update`
+
+![Alt text](Project3_images/ubuntu%20update.png)
+
+- Upgrade ubuntu `sudo apt upgrade`
+
+![Alt text](Project3_images/upgrade%20ubuntu.png)
+
+
