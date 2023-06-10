@@ -326,3 +326,24 @@ With REST APIs, a client requests a resource. Then the server responds to the cl
 
 Learn more from the source [here](https://www.freecodecamp.org/news/what-is-a-rest-api/)
 
+---
+
+# Project 3 Task: Deploy a simple To-Do application that creates To-Do lists like this:
+
+![Alt text](Project3_images/mern.gif)
+
+## Initiation - Preparing prerequisites
+
+In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
+
+If you do not have an AWS account – go back to Project 1 Step 0 to sign in to AWS free tier account and create a new EC2 Instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM) image. Remember, you can have multiple EC2 instances, but make sure you STOP/TERMINATE the ones you are not working with at the moment to save available free hours.
+
+Hint #1: When you create your EC2 Instances, you can add Tag “Name” to it with a value that corresponds to a current project you are working on – it will be reflected in the name of the EC2 Instance. Like this:
+
+![Alt text](Project3_images/EC2_tag.png)
+
+
+## 1st action - Backend Configuration
+
+- **Update ubuntu** 
+`sudo apt update`
