@@ -345,5 +345,4 @@ Hint #1: When you create your EC2 Instances, you can add Tag “Name” to it wi
 
 ## 1st action - Backend Configuration
 
-- **Update ubuntu** 
-`sudo apt update`
+- **Update ubuntu**  `sudo apt update`
