@@ -353,4 +353,6 @@ Hint #1: When you create your EC2 Instances, you can add Tag “Name” to it wi
 
 ![Alt text](Project3_images/upgrade%20ubuntu.png)
 
+Lets get the location of Node.js software from Ubuntu repositories.
 
+`curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
