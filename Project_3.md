@@ -481,9 +481,281 @@ Now we need to open this port in EC2 Security Groups. Refer to Project 1 Step 1 
 
 `http://<PublicIP-or-PublicDNS>:5000`
 
+`http://34.220.200.255:5000`
+
 Quick reminder how to get your server’s Public IP and public DNS name:
 1) You can find it in your AWS web console in EC2 details
 2) Run `curl -s http://169.254.169.254/latest/meta-data/public-ipv4` for Public IP address or `curl -s http://169.254.169.254/latest/meta-data/public-hostname` for Public DNS name.
+
+
+![Alt text](Project3_images/welcome%20to%20Express.png)
+
+**Routes**
+
+There are three actions that our To-Do application needs to be able to do:
+
+1. Create a new task  
+2. Display list of all tasks  
+3. Delete a completed task  
+
+Each task will be associated with some particular endpoint and will use different standard HTTP request methods: POST, GET, DELETE.
+
+For each task, we need to create routes that will define various endpoints that the To-do app will depend on. So let us create a folder **routes**
+
+`mkdir routes`
+
+**Tip:** You can open multiple shells in Putty or Linux/Mac to connect to the same EC2
+
+**Change directory to routes folder.**
+
+`cd routes`
+
+**Now, create a file api.js with the command below**
+
+`touch api.js`
+
+![Alt text](Project3_images/api%20js.png)
+
+**Open the file with the command below**
+
+`vim api.js`
+
+**Copy below code in the file. (Do not be overwhelmed with the code)**
+
+```
+const express = require ('express');
+const router = express.Router();
+
+router.get('/todos', (req, res, next) => {
+
+});
+
+router.post('/todos', (req, res, next) => {
+
+});
+
+router.delete('/todos/:id', (req, res, next) => {
+
+})
+
+module.exports = router;
+```
+
+Moving forward let create Models directory.
+
+**Models**
+
+Now comes the interesting part, since the app is going to make use of Mongodb which is a NoSQL database, we need to create a model.
+
+A model is at the heart of JavaScript based applications, and it is what makes it interactive.
+
+We will also use models to define the database schema . This is important so that we will be able to define the fields stored in each Mongodb document. (Seems like a lot of information, but not to worry, everything will become clear to you over time. I promise!!!)
+
+In essence, the Schema is a blueprint of how the database will be constructed, including other data fields that may not be required to be stored in the database. These are known as virtual properties
+
+To create a Schema and a model, install mongoose which is a Node.js package that makes working with mongodb easier.
+
+Change directory back Todo folder with `cd ..` and install Mongoose with `npm install mongoose`
+
+![Alt text](Project3_images/mongoose.png)
+
+Create a new folder models:
+
+`mkdir models`
+
+Change directory into the newly created ‘models’ folder with
+
+`cd models`
+
+Inside the models folder, create a file and name it todo.js
+
+`touch todo.js`
+
+Tip: All three commands above can be defined in one line to be executed consequently with help of && operator, like this:
+
+`mkdir models && cd models && touch todo.js`
+
+Open the file created with `vim todo.js` then paste the code below in the file:
+
+```
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+//create schema for todo
+const TodoSchema = new Schema({
+action: {
+type: String,
+required: [true, 'The todo text field is required']
+}
+})
+
+//create model for todo
+const Todo = mongoose.model('todo', TodoSchema);
+
+module.exports = Todo;
+```
+
+Now we need to update our routes from the file api.js in ‘routes’ directory to make use of the new model.
+
+In Routes directory, open api.js with `vim api.js`, delete the code inside with `:%d` command and paste the code below into it then save and exit
+
+```
+const express = require ('express');
+const router = express.Router();
+const Todo = require('../models/todo');
+
+router.get('/todos', (req, res, next) => {
+
+//this will return all the data, exposing only the id and action field to the client
+Todo.find({}, 'action')
+.then(data => res.json(data))
+.catch(next)
+});
+
+router.post('/todos', (req, res, next) => {
+if(req.body.action){
+Todo.create(req.body)
+.then(data => res.json(data))
+.catch(next)
+}else {
+res.json({
+error: "The input field is empty"
+})
+}
+});
+
+router.delete('/todos/:id', (req, res, next) => {
+Todo.findOneAndDelete({"_id": req.params.id})
+.then(data => res.json(data))
+.catch(next)
+})
+
+module.exports = router;
+```
+
+The next piece of our application will be the MongoDB Database
+
+**MongoDB Database**
+
+We need a database where we will store our data. For this we will make use of mLab. mLab provides MongoDB database as a service solution (DBaaS), so to make life easy, you will need to sign up for a shared clusters free account, which is ideal for our use case. Sign up here. Follow the sign up process, select AWS as the cloud provider, and choose a region near you.
+
+Complete a get started checklist as shown on the image below
+
+![Alt text](Project3_images/Create-a-Cluster.png)
+
+![Alt text](Project3_images/ceration-of-username-and-password.png)
+
+Allow access to the MongoDB database from anywhere (Not secure, but it is ideal for testing)
+
+IMPORTANT NOTE
+In the image below, make sure you change the time of deleting the entry from 6 Hours to 1 Week
+
+![Alt text](Project3_images/MogoDB-Network-Access.png)
+
+![Alt text](Project3_images/Browse-Collections.png)
+
+![Alt text](Project3_images/Build-a-Database.png)
+
+In the **index.js** file, we specified **process.env** to access environment variables, but we have not yet created this file. So we need to do that now.
+
+Create a file in your Todo directory and name it .env.
+
+```
+touch .env
+```
+
+Follow image examples below to get the connection string and save in a format like this: `DB=mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority` to access the MongoDB database. 
+
+
+**Here is how to get your connection string**
+
+![Alt text](Project3_images/connect-to-cluster.png)
+
+![Alt text](Project3_images/click-on-mongodb-driver.png)
+
+![Alt text](Project3_images/connect-to-cluster1.png)
+
+
+Ensure to update the username, password, network-address, and database name according to your setup. In most cases only password and database name requires update. format like this: `DB=mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority`(example: DB=mongodb+srv://username:password@project3-dbcluster.vrzzagv.mongodb.net/Project3-DBcluster
+?retryWrites=true&w=majority)
+
+While in **Todo directory**, use `vi .env` command to open .env file, copy the connection string, paste it into the vi editor. Use command `:wq` to save and quit the vi editor.
+
+
+
+
+Now we need to update the **index.js** to reflect the use of **.env** so that **Node.js** can connect to the database.
+
+Simply delete existing content in the file, and update it with the entire code below.
+
+
+
+To do that using vim, follow below steps
+
+1. Open the file with `vim index.js`
+2. Press `esc`
+3. Type :%d
+4. Hit ‘Enter’
+
+The entire content will be deleted, then,
+
+5. Press `i` to enter the insert mode in vim
+6. Now, paste the entire code below in the file.
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/api');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+//connect to the database
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => console.log(`Database connected successfully`))
+.catch(err => console.log(err));
+
+//since mongoose promise is depreciated, we overide it with node's promise
+mongoose.Promise = global.Promise;
+
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+
+app.use(bodyParser.json());
+
+app.use('/api', routes);
+
+app.use((err, req, res, next) => {
+console.log(err);
+next();
+});
+
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+
+```
+
+Using environment variables to store information is considered more secure and best practice to separate configuration and secret data from the application, instead of writing connection strings directly inside the index.js application file.
+
+Start your server using the command:
+
+`node index.js`
+
+
+
+
+
+
+
+
 
 
 
