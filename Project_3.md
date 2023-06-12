@@ -772,6 +772,10 @@ Now open your Postman, create a POST request to the API http://<PublicIP-or-Publ
 
 ![Alt text](Project3_images/postman_header.png)
 
+Check the image below:
+
+![Alt text](Project3_images/post-request.jpeg)
+
 Create a GET request to your API on http://<PublicIP-or-PublicDNS>:5000/api/todos. This request retrieves all existing records from out To-do application (backend requests these records from the database and sends it us back as a response to GET request).
 
 ![Alt text](Project3_images/get-request.jpeg)
