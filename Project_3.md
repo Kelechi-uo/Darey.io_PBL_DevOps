@@ -654,7 +654,7 @@ In the image below, make sure you change the time of deleting the entry from 6 H
 
 ![Alt text](Project3_images/Browse-Collections.png)
 
-![Alt text](Project3_images/Build-a-Database.png)
+![Alt text](Project3_images/From%20coll%20to%20overview%20tab.png)
 
 In the **index.js** file, we specified **process.env** to access environment variables, but we have not yet created this file. So we need to do that now.
 
