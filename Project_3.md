@@ -342,8 +342,8 @@ Hint #1: When you create your EC2 Instances, you can add Tag “Name” to it wi
 
 ![Alt text](Project3_images/EC2_tag.png)
 
-
-## 1st action - Backend Configuration
+---
+# 1st action - Backend Configuration
 
 - **Update ubuntu**  `sudo apt update`
 
@@ -484,8 +484,8 @@ Now we need to open this port in EC2 Security Groups. Refer to Project 1 Step 1 
 `http://34.220.200.255:5000`
 
 Quick reminder how to get your server’s Public IP and public DNS name:
-1) You can find it in your AWS web console in EC2 details
-2) Run `curl -s http://169.254.169.254/latest/meta-data/public-ipv4` for Public IP address or `curl -s http://169.254.169.254/latest/meta-data/public-hostname` for Public DNS name.
+1. You can find it in your AWS web console in EC2 details
+2. Run `curl -s http://169.254.169.254/latest/meta-data/public-ipv4` for Public IP address or `curl -s http://169.254.169.254/latest/meta-data/public-hostname` for Public DNS name.
 
 
 ![Alt text](Project3_images/welcome%20to%20Express.png)
@@ -776,11 +776,11 @@ Check the image below:
 
 ![Alt text](Project3_images/post-request.jpeg)
 
-Create a GET request to your API on http://<PublicIP-or-PublicDNS>:5000/api/todos. This request retrieves all existing records from out To-do application (backend requests these records from the database and sends it us back as a response to GET request).
+Create a GET request to your API on http://<PublicIP-or-PublicDNS>:5000/api/todos. This request retrieves all existing records from our To-do application (backend requests these records from the database and sends it back to us as a response to GET request).
 
 ![Alt text](Project3_images/get-request.jpeg)
 
-**Optional task:** Try to figure out how to send a DELETE request to delete a task from out To-Do list.
+**Optional task:** Try to figure out how to send a DELETE request to delete a task from our To-Do list.
 
 **Hint:** To delete a task – you need to send its ID as a part of DELETE request.
 
@@ -791,6 +791,22 @@ By now you have tested backend part of our To-Do application and have made sure 
 - [x] Delete an existing task from the list – HTTP DELETE request
 
 We have successfully created our Backend, now let go create the Frontend.
+
+---
+
+# 2nd action - Frontend Creation
+
+Since we are done with the functionality we want from our backend and API, it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the `create-react-app` command to scaffold our app.
+
+In the same root directory as your backend code, which is the **Todo** directory, run:
+
+```
+npx create-react-app client
+```
+
+
+
+
 
 
 
